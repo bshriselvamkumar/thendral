@@ -3,82 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NGO Foundation</title>
+<title>Thendral Clone</title>
+
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header>
-  <div class="logo">🌿 Thendral</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Programs</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+<!-- TOP NAV -->
+<div class="top-bar">
+  <a>About us</a>
+  <a>Programs</a>
+  <a>Contact Us</a>
+</div>
 
-<!-- HERO -->
+<!-- HERO WITH LOGO -->
 <section class="hero">
-  <h1>Making a Better Tomorrow</h1>
-  <p>Helping communities grow with education & support</p>
-  <button>Donate Now</button>
+  <img src="logo.png" class="logo">
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>About Us</h2>
-  <p>We are a non-profit organization working to empower underprivileged communities.</p>
-</section>
+<!-- MAIN NAV -->
+<div class="main-nav">
+  <i class="fa fa-home"></i>
+  <a>ABOUT US</a>
+  <a>PROGRAMS</a>
+  <a>CONTACT US</a>
 
-<!-- PROGRAMS -->
-<section class="programs">
-  <h2>Our Programs</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Education</h3>
-      <p>Providing free education resources.</p>
-    </div>
-
-    <div class="card">
-      <h3>Healthcare</h3>
-      <p>Medical support for rural areas.</p>
-    </div>
-
-    <div class="card">
-      <h3>Women Empowerment</h3>
-      <p>Helping women build careers.</p>
-    </div>
+  <div class="icons">
+    <i class="fa fa-search"></i>
+    <i class="fa fa-bell"></i>
   </div>
-</section>
+</div>
 
-<!-- GALLERY -->
-<section class="gallery">
-  <h2>Gallery</h2>
-  <div class="images">
-    <img src="https://picsum.photos/300/200">
-    <img src="https://picsum.photos/301/200">
-    <img src="https://picsum.photos/302/200">
+<!-- TICKER -->
+<div class="ticker">
+  <span># Top Tags</span>
+  <div class="scroll-text">
+    <p>Memory techniques program October 12 @ Trichy • Ayusu Nuru 50+50=100 • New event coming soon...</p>
   </div>
-</section>
+</div>
 
-<!-- CONTACT -->
-<section class="contact">
-  <h2>Contact Us</h2>
-  <input type="text" placeholder="Your Name">
-  <input type="email" placeholder="Email">
-  <textarea placeholder="Message"></textarea>
-  <button>Send</button>
-</section>
+<!-- MAIN CONTENT -->
+<div class="container">
 
-<footer>
-  <p>© 2026 NGO Foundation</p>
-</footer>
+  <!-- LEFT POSTS -->
+  <div class="left">
+
+    <div class="post-card slide">
+      <h3>Thendral KUBERAYOGAM</h3>
+      <p>July 10, 2025 • Admin</p>
+    </div>
+
+    <div class="post-card slide">
+      <h3>New Programme</h3>
+      <p>Latest update</p>
+    </div>
+
+  </div>
+
+  <!-- CENTER IMAGE -->
+  <div class="center slide">
+    <img src="https://picsum.photos/500/300">
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="right">
+
+    <div class="sidebar">
+      <h4>Latest</h4>
+      <p>Thendral KUBERAYOGAM...</p>
+    </div>
+
+    <div class="sidebar">
+      <h4>Trending</h4>
+      <p>Detox Program...</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
