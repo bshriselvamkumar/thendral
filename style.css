@@ -7,16 +7,12 @@ body {
 .top-bar {
   background: #0f7b77;
   color: white;
-  padding: 10px 20px;
-}
-
-.top-bar a {
-  margin-right: 15px;
+  padding: 10px;
 }
 
 /* HERO */
 .hero {
-  height: 220px;
+  height: 200px;
   background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
   display: flex;
   align-items: center;
@@ -27,45 +23,25 @@ body {
   height: 120px;
   background: white;
   padding: 10px;
-  border-radius: 6px;
 }
 
 /* NAV */
 .nav {
   background: #0f7b77;
+  padding: 10px;
   color: white;
-  padding: 12px 20px;
+}
+
+/* LATEST */
+.latest-strip {
   display: flex;
-  gap: 20px;
-}
-
-.icons {
-  margin-left: auto;
-}
-
-/* TAGS */
-.tags {
-  padding: 10px 20px;
   background: #eee;
 }
 
-.tag {
-  background: #cfeaea;
-  padding: 4px 8px;
-}
-
-/* LATEST STRIP */
-.latest-strip {
-  display: flex;
-  align-items: center;
-  background: #e5e5e5;
-}
-
 .latest-label {
-  background: #0f7b77;
+  background: teal;
   color: white;
-  padding: 10px 20px;
-  font-weight: bold;
+  padding: 10px;
 }
 
 .latest-scroll {
@@ -75,7 +51,7 @@ body {
 
 .scroll-content {
   white-space: nowrap;
-  animation: scroll 12s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 @keyframes scroll {
@@ -86,68 +62,30 @@ body {
 /* LAYOUT */
 .container {
   display: flex;
-  gap: 20px;
   padding: 20px;
 }
 
-.left { width: 25%; }
-.center { width: 50%; }
-.right { width: 25%; }
+.left { width: 30%; }
+.center { width: 40%; }
+.right { width: 30%; }
 
 /* POSTS */
 .post-card {
   background: black;
   color: white;
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.badge {
-  background: teal;
-  padding: 4px 8px;
-  font-size: 12px;
-}
-
-/* CENTER IMAGE */
-.featured {
-  position: relative;
-}
-
-.featured img {
-  width: 100%;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 24px;
-}
-
-/* SIDEBAR */
-.side-card {
-  background: #f1f1f1;
-  padding: 15px;
-  margin-top: 10px;
-}
-
-.tabs button {
-  padding: 8px;
-}
-
-.tabs .active {
-  background: teal;
-  color: white;
+.post-card:hover {
+  transform: scale(1.05);
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-  }
-
-  .left, .center, .right {
-    width: 100%;
   }
 }
