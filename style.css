@@ -1,105 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thendral Foundation</title>
+/* SLIDER */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+.slides {
+  position: relative;
+}
 
-<body>
+.slide {
+  display: none;
+  position: relative;
+}
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div class="top-links">
-    <a href="#">About us</a>
-    <a href="#">Programs</a>
-    <a href="#">Contact Us</a>
-  </div>
-</div>
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-<!-- HERO -->
-<div class="hero">
-  <img src="images/logo.png" class="logo">
-</div>
+.slide.active {
+  display: block;
+  animation: fade 1s;
+}
 
-<!-- NAVBAR -->
-<div class="nav">
-  <i class="fa fa-home"></i>
-  <a href="#">ABOUT US</a>
-  <a href="#">PROGRAMS</a>
-  <a href="#">CONTACT US</a>
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+}
 
-  <div class="icons">
-    <i class="fa fa-search"></i>
-    <i class="fa fa-bell"></i>
-  </div>
-</div>
-
-<!-- TAGS -->
-<div class="tags">
-  <b># Top Tags</b>
-  <span>memory technique in tamil</span>
-</div>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-track">
-    Thendral KUBERAYOGAM • Detox Program • Memory Training • Ayusu Nuru 50+50=100 • New Events Coming Soon
-  </div>
-</div>
-
-<!-- MAIN CONTENT -->
-<div class="container">
-
-  <!-- LEFT -->
-  <div class="left">
-
-    <div class="card fade">
-      <span class="badge">PROGRAMME</span>
-      <h3>Thendral KUBERAYOGAM</h3>
-      <p>July 10, 2025 • Admin</p>
-    </div>
-
-    <div class="card fade">
-      <span class="badge">PROGRAMME</span>
-      <h3>Detox Program</h3>
-      <p>Latest update</p>
-    </div>
-
-  </div>
-
-  <!-- CENTER -->
-  <div class="center fade">
-    <img src="https://picsum.photos/700/400">
-  </div>
-
-  <!-- RIGHT -->
-  <div class="right">
-
-    <div class="tabs">
-      <button class="active">Latest</button>
-      <button>Popular</button>
-      <button>Trending</button>
-    </div>
-
-    <div class="sidebar fade">
-      <span class="badge">PROGRAMME</span>
-      <p>Thendral KUBERAYOGAM...</p>
-    </div>
-
-    <div class="sidebar fade">
-      <span class="badge">UNCATEGORIZED</span>
-      <p>Detox Program happening now...</p>
-    </div>
-
-  </div>
-
-</div>
-
-</body>
-
-<script src="script.js"></script>
-</html>
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
