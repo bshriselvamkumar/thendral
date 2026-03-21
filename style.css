@@ -1,5 +1,114 @@
 body {
+  body {
   margin: 0;
+  font-family: Arial;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #0f7b77;
+  color: white;
+  padding: 10px 20px;
+}
+
+.top-bar a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 220px;
+  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo {
+  height: 120px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* NAV */
+.nav {
+  background: #0f7b77;
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+/* LATEST */
+.latest-strip {
+  display: flex;
+  align-items: center;
+  background: #e5e5e5;
+}
+
+.latest-label {
+  background: #0f7b77;
+  color: white;
+  padding: 10px 20px;
+}
+
+.latest-scroll {
+  overflow: hidden;
+  flex: 1;
+}
+
+.scroll-content {
+  white-space: nowrap;
+  animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left { width: 30%; }
+.center { width: 40%; }
+.right { width: 30%; }
+
+.center img {
+  width: 100%;
+}
+
+/* POSTS */
+.post-card {
+  background: black;
+  color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.post-card:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .center, .right {
+    width: 100%;
+  }
+}margin: 0;
   font-family: Arial;
 }
 
