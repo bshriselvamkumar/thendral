@@ -6,28 +6,27 @@
 <title>Thendral Clone</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 
 <body>
 
-<!-- TOP NAV -->
+<!-- TOP BAR -->
 <div class="top-bar">
-  <a>About us</a>
-  <a>Programs</a>
-  <a>Contact Us</a>
+  <div class="top-links">
+    <a>About us</a>
+    <a>Programs</a>
+    <a>Contact Us</a>
+  </div>
 </div>
 
-<!-- HERO WITH LOGO -->
-<section class="hero">
-  <img src="logo.png" class="logo">
-</section>
+<!-- HERO -->
+<div class="hero">
+  <img src="images/logo.png" class="logo">
+</div>
 
-<!-- MAIN NAV -->
-<div class="main-nav">
+<!-- NAV -->
+<div class="nav">
   <i class="fa fa-home"></i>
   <a>ABOUT US</a>
   <a>PROGRAMS</a>
@@ -39,55 +38,63 @@
   </div>
 </div>
 
+<!-- TAGS -->
+<div class="tags">
+  <b># Top Tags</b>
+  <span>memory technique in tamil</span>
+</div>
+
 <!-- TICKER -->
 <div class="ticker">
-  <span># Top Tags</span>
-  <div class="scroll-text">
-    <p>Memory techniques program October 12 @ Trichy • Ayusu Nuru 50+50=100 • New event coming soon...</p>
+  <div class="ticker-track">
+    Thendral KUBERAYOGAM • Detox Program • Memory Training • Ayusu Nuru 50+50=100 • New Event Coming Soon
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <div class="container">
 
-  <!-- LEFT POSTS -->
+  <!-- LEFT -->
   <div class="left">
-
-    <div class="post-card slide">
-      <h3>Thendral KUBERAYOGAM</h3>
+    <div class="card fade">
+      <span class="badge">PROGRAMME</span>
+      <h3>Thendral KUBERAYOGAM...</h3>
       <p>July 10, 2025 • Admin</p>
     </div>
 
-    <div class="post-card slide">
-      <h3>New Programme</h3>
+    <div class="card fade">
+      <span class="badge">PROGRAMME</span>
+      <h3>Detox Program</h3>
       <p>Latest update</p>
     </div>
-
   </div>
 
-  <!-- CENTER IMAGE -->
-  <div class="center slide">
-    <img src="https://picsum.photos/500/300">
+  <!-- CENTER -->
+  <div class="center fade">
+    <img src="https://picsum.photos/600/400">
   </div>
 
-  <!-- RIGHT SIDEBAR -->
+  <!-- RIGHT -->
   <div class="right">
+    <div class="tabs">
+      <button class="active">Latest</button>
+      <button>Popular</button>
+      <button>Trending</button>
+    </div>
 
-    <div class="sidebar">
-      <h4>Latest</h4>
+    <div class="sidebar fade">
+      <span class="badge">PROGRAMME</span>
       <p>Thendral KUBERAYOGAM...</p>
     </div>
 
-    <div class="sidebar">
-      <h4>Trending</h4>
-      <p>Detox Program...</p>
+    <div class="sidebar fade">
+      <span class="badge">UNCATEGORIZED</span>
+      <p>Detox Program happening now...</p>
     </div>
-
   </div>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
