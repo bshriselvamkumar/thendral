@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thendral Foundation</title>
 
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -14,9 +16,11 @@
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  <a href="#">About us</a>
-  <a href="#">Programs</a>
-  <a href="#">Contact Us</a>
+  <div class="top-links">
+    <a>About us</a>
+    <a>Programs</a>
+    <a>Contact Us</a>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -26,50 +30,59 @@
 
 <!-- NAV -->
 <div class="nav">
-  <a href="#">ABOUT US</a>
-  <a href="#">PROGRAMS</a>
-  <a href="#">CONTACT US</a>
+  <a>ABOUT US</a>
+  <a>PROGRAMS</a>
+  <a>CONTACT US</a>
 </div>
 
-<!-- LATEST STRIP -->
+<!-- LATEST -->
 <div class="latest-strip">
   <div class="latest-label">Latest Post</div>
   <div class="latest-scroll">
     <div class="scroll-content">
-      Thendral KUBERAYOGAM • Detox Program • Memory Training • New Events Coming Soon
+      Thendral KUBERAYOGAM • Detox Program • Memory Training • Ayusu Nuru 50+50=100
     </div>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <div class="container">
 
-  <!-- LEFT POSTS (DYNAMIC) -->
-  <div class="left" id="posts">
-    <!-- Firebase posts will load here -->
+  <!-- LEFT -->
+  <div class="left">
+
+    <div class="post-card">
+      <span class="badge">ABOUT</span>
+      <h2>Introduction to Thendral Foundation</h2>
+      <p>
+        Thendral Foundation is a non-profit organization that helps people improve
+        their life through health, natural healing, and lifestyle programs.
+      </p>
+      <button onclick="openPost()">Read More</button>
+    </div>
+
   </div>
 
-  <!-- CENTER IMAGE -->
+  <!-- CENTER -->
   <div class="center">
-    <img src="https://picsum.photos/700/400">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
   </div>
 
-  <!-- RIGHT SIDEBAR -->
+  <!-- RIGHT -->
   <div class="right">
     <div class="sidebar">
       <h3>Latest Updates</h3>
-      <p>More content coming soon...</p>
+      <p>New detox program launching soon...</p>
     </div>
   </div>
 
 </div>
 
-<!-- 🔥 FIREBASE (MUST BE BEFORE script.js) -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-
-<!-- YOUR SCRIPT -->
-<script src="script.js"></script>
+<script>
+function openPost(){
+  window.location.href = "post.html";
+}
+</script>
 
 </body>
 </html>
