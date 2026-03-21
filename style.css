@@ -1,40 +1,153 @@
-/* SLIDER */
-.slider {
-  width: 100%;
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* TOP */
+.top-bar {
+  background: #0f7b77;
+  color: white;
+  padding: 10px 20px;
+}
+
+.top-bar a {
+  margin-right: 15px;
+}
+
+/* HERO */
+.hero {
+  height: 220px;
+  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.logo {
+  height: 120px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* NAV */
+.nav {
+  background: #0f7b77;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.icons {
+  margin-left: auto;
+}
+
+/* TAGS */
+.tags {
+  padding: 10px 20px;
+  background: #eee;
+}
+
+.tag {
+  background: #cfeaea;
+  padding: 4px 8px;
+}
+
+/* LATEST STRIP */
+.latest-strip {
+  display: flex;
+  align-items: center;
+  background: #e5e5e5;
+}
+
+.latest-label {
+  background: #0f7b77;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.latest-scroll {
   overflow: hidden;
-  margin: 20px 0;
+  flex: 1;
 }
 
-.slides {
+.scroll-content {
+  white-space: nowrap;
+  animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left { width: 25%; }
+.center { width: 50%; }
+.right { width: 25%; }
+
+/* POSTS */
+.post-card {
+  background: black;
+  color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background: teal;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* CENTER IMAGE */
+.featured {
   position: relative;
 }
 
-.slide {
-  display: none;
-  position: relative;
-}
-
-.slide img {
+.featured img {
   width: 100%;
-  border-radius: 10px;
 }
 
-.slide.active {
-  display: block;
-  animation: fade 1s;
-}
-
-.caption {
+.overlay {
   position: absolute;
   bottom: 20px;
   left: 20px;
   color: white;
   font-size: 24px;
-  background: rgba(0,0,0,0.6);
-  padding: 10px;
 }
 
-@keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* SIDEBAR */
+.side-card {
+  background: #f1f1f1;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.tabs button {
+  padding: 8px;
+}
+
+.tabs .active {
+  background: teal;
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .center, .right {
+    width: 100%;
+  }
 }
