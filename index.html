@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thendral Foundation</title>
 
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -13,9 +14,9 @@
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  <a>About us</a>
-  <a>Programs</a>
-  <a>Contact Us</a>
+  <a href="#">About us</a>
+  <a href="#">Programs</a>
+  <a href="#">Contact Us</a>
 </div>
 
 <!-- HERO -->
@@ -25,12 +26,12 @@
 
 <!-- NAV -->
 <div class="nav">
-  <a>ABOUT US</a>
-  <a>PROGRAMS</a>
-  <a>CONTACT US</a>
+  <a href="#">ABOUT US</a>
+  <a href="#">PROGRAMS</a>
+  <a href="#">CONTACT US</a>
 </div>
 
-<!-- LATEST -->
+<!-- LATEST STRIP -->
 <div class="latest-strip">
   <div class="latest-label">Latest Post</div>
   <div class="latest-scroll">
@@ -40,10 +41,10 @@
   </div>
 </div>
 
-<!-- MAIN -->
+<!-- MAIN CONTENT -->
 <div class="container">
 
-  <!-- LEFT POSTS -->
+  <!-- LEFT POSTS (DYNAMIC) -->
   <div class="left" id="posts">
     <!-- Firebase posts will load here -->
   </div>
@@ -53,13 +54,22 @@
     <img src="https://picsum.photos/700/400">
   </div>
 
-  <!-- RIGHT -->
+  <!-- RIGHT SIDEBAR -->
   <div class="right">
-    <div class="sidebar">Latest Updates</div>
+    <div class="sidebar">
+      <h3>Latest Updates</h3>
+      <p>More content coming soon...</p>
+    </div>
   </div>
 
 </div>
 
+<!-- 🔥 FIREBASE (MUST BE BEFORE script.js) -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<!-- YOUR SCRIPT -->
 <script src="script.js"></script>
+
 </body>
 </html>
