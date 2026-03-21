@@ -1,10 +1,10 @@
-const slides = document.querySelectorAll('.slide');
+const elements = document.querySelectorAll('.fade');
 
 window.addEventListener('scroll', () => {
-  slides.forEach(slide => {
-    const top = slide.getBoundingClientRect().top;
-    if (top < window.innerHeight - 50) {
-      slide.classList.add('active');
+  elements.forEach(el => {
+    const pos = el.getBoundingClientRect().top;
+    if (pos < window.innerHeight - 50) {
+      el.classList.add('show');
     }
   });
 });
