@@ -10,7 +10,7 @@ body {
   padding: 10px 30px;
 }
 
-.top-links a {
+.top-bar a {
   color: white;
   margin-right: 20px;
   text-decoration: none;
@@ -18,7 +18,7 @@ body {
 
 /* HERO */
 .hero {
-  height: 230px;
+  height: 220px;
   background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
   display: flex;
   align-items: center;
@@ -41,7 +41,6 @@ body {
 .nav a {
   color: white;
   margin-right: 25px;
-  text-decoration: none;
   font-weight: bold;
 }
 
@@ -75,18 +74,13 @@ body {
 /* LAYOUT */
 .container {
   display: flex;
-  padding: 30px;
   gap: 20px;
+  padding: 30px;
 }
 
 .left { width: 30%; }
 .center { width: 40%; }
 .right { width: 30%; }
-
-.center img {
-  width: 100%;
-  border-radius: 10px;
-}
 
 /* CARD */
 .post-card {
@@ -107,14 +101,23 @@ body {
   font-size: 12px;
 }
 
-/* BUTTON */
-button {
-  background: teal;
-  color: white;
-  border: none;
-  padding: 10px;
+/* IMAGE */
+.post-img {
+  width: 100%;
   margin-top: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
   cursor: pointer;
+}
+
+.post-img:hover {
+  transform: scale(1.05);
+}
+
+/* CENTER */
+.center img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* SIDEBAR */
