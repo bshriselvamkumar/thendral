@@ -1,36 +1,63 @@
-// 🔥 PASTE YOUR FIREBASE CONFIG HERE
-const firebaseConfig = {
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_DOMAIN",
-  projectId: "YOUR_PROJECT_ID"
-};
+// 🔥 1. SMOOTH SCROLL ANIMATION (fade-in)
+const elements = document.querySelectorAll('.post-card, .sidebar, .center');
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-const container = document.getElementById("posts");
-
-// LOAD POSTS
-async function loadPosts() {
-  const snapshot = await db.collection("posts").get();
-
-  container.innerHTML = "";
-
-  snapshot.forEach(doc => {
-    const post = doc.data();
-
-    container.innerHTML += `
-      <div class="post-card" onclick="openPost('${doc.id}')">
-        <h3>${post.title}</h3>
-        <p>${post.date}</p>
-      </div>
-    `;
+function reveal() {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    }
   });
 }
 
-loadPosts();
+window.addEventListener("scroll", reveal);
 
-// OPEN POST
-function openPost(id) {
-  window.location.href = "post.html?id=" + id;
+// INITIAL STYLE
+elements.forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(30px)";
+  el.style.transition = "0.6s";
+});
+
+
+// 🔥 2. AUTO NEWS TICKER PAUSE ON HOVER
+const ticker = document.querySelector(".scroll-content");
+
+if (ticker) {
+  ticker.addEventListener("mouseenter", () => {
+    ticker.style.animationPlayState = "paused";
+  });
+
+  ticker.addEventListener("mouseleave", () => {
+    ticker.style.animationPlayState = "running";
+  });
 }
+
+
+// 🔥 3. BUTTON CLICK EFFECT
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.style.transform = "scale(0.95)";
+    setTimeout(() => {
+      btn.style.transform = "scale(1)";
+    }, 150);
+  });
+});
+
+
+// 🔥 4. SIMPLE IMAGE ZOOM (LIKE NEWS SITES)
+const images = document.querySelectorAll(".center img");
+
+images.forEach(img => {
+  img.addEventListener("mouseenter", () => {
+    img.style.transform = "scale(1.05)";
+    img.style.transition = "0.4s";
+  });
+
+  img.addEventListener("mouseleave", () => {
+    img.style.transform = "scale(1)";
+  });
+});
