@@ -1,4 +1,15 @@
-// Fade animation
+// ticker pause
+const ticker = document.querySelector(".scroll-text");
+
+if (ticker) {
+  ticker.addEventListener("mouseenter", () => {
+    ticker.style.animationPlayState = "paused";
+  });
+
+  ticker.addEventListener("mouseleave", () => {
+    ticker.style.animationPlayState = "running";
+  });
+}// Fade animation
 const elements = document.querySelectorAll('.post-card, .sidebar, .center');
 
 elements.forEach(el => {
