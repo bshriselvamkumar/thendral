@@ -1,125 +1,47 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f2f2f2;
-}
-
-/* TOP */
-.top-bar {
-  background: #0f7b77;
-  padding: 10px 30px;
-}
-.top-bar a {
-  color: white;
-  margin-right: 20px;
-}
-
-/* HERO */
-.hero {
-  height: 200px;
-  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-}
-.logo {
-  height: 110px;
-  background: white;
-  padding: 10px;
-}
-
-/* NAV */
-.nav {
-  background: #0f7b77;
-  padding: 15px;
-}
-.nav a {
-  color: white;
-  margin-right: 20px;
-}
-
-/* TAGS */
-.tags {
-  padding: 10px 20px;
-}
-.tags span {
-  background: #e0f2f1;
-  padding: 5px 10px;
-}
-
-/* LATEST */
 .latest {
   display: flex;
-  background: #ddd;
+  background: #eee;
+  align-items: center;
 }
+
 .latest-label {
   background: #0f7b77;
   color: white;
-  padding: 10px;
+  padding: 10px 15px;
+  font-weight: bold;
 }
+
+.latest-scroll {
+  overflow: hidden;
+  flex: 1;
+  white-space: nowrap;
+}
+
 .scroll-text {
-  animation: scroll 12s linear infinite;
-}
-@keyframes scroll {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+  display: inline-block;
+  padding-left: 100%;
+  animation: smoothScroll 15s linear infinite;
 }
 
-/* MAIN */
-.main {
-  display: flex;
-  padding: 20px;
-  gap: 20px;
+@keyframes smoothScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
-.left { width: 25%; }
-.center { width: 50%; }
-.right { width: 25%; }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* CARD */
 .card {
   background: black;
   color: white;
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-/* HERO CARD */
-.hero-card {
-  position: relative;
-}
-.hero-card img {
-  width: 100%;
-}
-.overlay {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  padding: 20px;
-  background: linear-gradient(transparent, black);
-}
-
-/* SIDEBAR */
-.sidebar {
-  background: white;
-  padding: 15px;
-}
-
-.tabs span {
-  margin-right: 10px;
-}
-.active {
-  font-weight: bold;
-}
-
-.side-post {
-  margin-top: 10px;
-}
-
-/* BADGE */
-.badge {
-  background: teal;
-  color: white;
-  padding: 3px 8px;
-  font-size: 12px;
+.card:hover {
+  transform: translateY(-5px);
 }
