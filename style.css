@@ -1,36 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #177e78;
+  color: white;
+  padding: 10px 20px;
+}
+
+.top-bar a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa') center/cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.logo {
+  height: 100px;
+  background: white;
+  padding: 10px;
+}
+
+/* NAV */
+.nav {
+  background: #177e78;
+  padding: 15px;
+}
+
+.nav a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* TAGS */
+.tags {
+  padding: 10px 20px;
+  background: #eee;
+}
+
+.tags span {
+  background: #ddd;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+/* LATEST */
 .latest {
   display: flex;
-  background: #eee;
   align-items: center;
+  background: #ddd;
 }
 
 .latest-label {
-  background: #0f7b77;
+  background: #177e78;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-weight: bold;
 }
 
 .latest-scroll {
   overflow: hidden;
-  flex: 1;
-  white-space: nowrap;
+  width: 100%;
 }
 
 .scroll-text {
-  display: inline-block;
-  padding-left: 100%;
-  animation: smoothScroll 15s linear infinite;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
 }
 
-@keyframes smoothScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
 }
 
-.card-link {
-  text-decoration: none;
-  color: inherit;
+/* MAIN */
+.main {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* LEFT */
+.left {
+  width: 25%;
 }
 
 .card {
@@ -38,10 +103,58 @@
   color: white;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 8px;
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.badge {
+  background: #177e78;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* CENTER */
+.center {
+  width: 50%;
+}
+
+.hero-card {
+  position: relative;
+  display: block;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+  background: linear-gradient(transparent, black);
+}
+
+/* RIGHT */
+.right {
+  width: 25%;
+}
+
+.sidebar {
+  background: white;
+  padding: 15px;
+}
+
+.tabs span {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.side-post {
+  margin-top: 15px;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
 }
