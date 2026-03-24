@@ -1,45 +1,18 @@
-// ticker pause
-const ticker = document.querySelector(".scroll-text");
-
-if (ticker) {
-  ticker.addEventListener("mouseenter", () => {
-    ticker.style.animationPlayState = "paused";
+// Hover animation for cards
+document.querySelectorAll(".card, .hero-card").forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.03)";
+    card.style.transition = "0.3s";
   });
 
-  ticker.addEventListener("mouseleave", () => {
-    ticker.style.animationPlayState = "running";
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
   });
-}// Fade animation
-const elements = document.querySelectorAll('.post-card, .sidebar, .center');
-
-elements.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(30px)";
-  el.style.transition = "0.6s";
 });
 
-function reveal() {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 50) {
-      el.style.opacity = 1;
-      el.style.transform = "translateY(0)";
-    }
+// Click effect (small press animation)
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    link.style.opacity = "0.7";
   });
-}
-
-window.addEventListener("scroll", reveal);
-reveal();
-
-// Pause ticker
-const ticker = document.querySelector(".scroll-content");
-
-if (ticker) {
-  ticker.addEventListener("mouseenter", () => {
-    ticker.style.animationPlayState = "paused";
-  });
-
-  ticker.addEventListener("mouseleave", () => {
-    ticker.style.animationPlayState = "running";
-  });
-}
+});
