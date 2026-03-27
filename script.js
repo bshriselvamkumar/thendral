@@ -1,10 +1,8 @@
-// hover animation
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "scale(1.05)";
-  });
+// LOGIN
+function openLogin(){
+  alert("Login feature active (demo)")
+}
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "scale(1)";
-  });
-});
+function openSignup(){
+  alert("Signup feature active (demo)")
+}
