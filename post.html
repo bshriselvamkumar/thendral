@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Detox Program</title>
-  <link rel="stylesheet" href="style.css">
+<title>Post</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="top-bar">
-  <a href="index.html">Home</a>
-</div>
+<h1 id="title" class="gradient"></h1>
+<p id="content"></p>
 
-<div class="hero">
-  <img src="images/logo.png" class="logo">
-</div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
 
-<div class="main">
+const data = {
+  detox: {
+    title:"Body Detox Program",
+    content:"This program helps cleanse your body naturally, improving liver and kidney function..."
+  },
+  mind: {
+    title:"Mind Energy Program",
+    content:"Enhances memory, focus and brain performance..."
+  },
+  kubera: {
+    title:"Kubera Yogam",
+    content:"Teaches financial discipline and wealth attraction..."
+  },
+  healing: {
+    title:"Healing Training",
+    content:"Focuses on spiritual and emotional healing..."
+  }
+};
 
-  <div class="left">
-
-    <h2>Thendral Detox Program (21 Days)</h2>
-
-    <img src="images/kubera.jpg" style="width:100%;">
-
-    <p>
-      This detox training focuses on natural healing using food-based
-      methods to cleanse the body.
-    </p>
-
-    <p>
-      It improves digestion, reduces stress, and boosts overall health
-      through simple lifestyle changes.
-    </p>
-
-  </div>
-
-  <div class="right">
-
-    <div class="sidebar">
-      <h3>About Thendral Foundation</h3>
-      <p>
-        Thendral Foundation helps people improve life through
-        natural healing and training programs.
-      </p>
-    </div>
-
-  </div>
-
-</div>
+document.getElementById("title").innerText = data[type].title;
+document.getElementById("content").innerText = data[type].content;
+</script>
 
 </body>
 </html>
