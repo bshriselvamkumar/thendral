@@ -1,40 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Post</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background:#f5f6fa;
+  line-height:1.8;
+}
+
+/* HEADER */
+.header{
+  background:#fff;
+  padding:20px 60px;
+  font-weight:bold;
+  font-size:22px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:900px;
+  margin:50px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.title{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:20px;
+
+  background:linear-gradient(90deg,#ff512f,#dd2476);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* SUBTEXT */
+.meta{
+  color:#777;
+  margin-bottom:30px;
+}
+
+/* CONTENT */
+.content{
+  font-size:18px;
+  color:#333;
+}
+
+/* GRADIENT HIGHLIGHT */
+.highlight{
+  background:linear-gradient(90deg,#ff512f,#f09819);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:bold;
+}
+
+/* SECTION HEADINGS */
+h2{
+  margin-top:30px;
+  font-size:26px;
+
+  background:linear-gradient(90deg,#36d1dc,#5b86e5);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* BACK BUTTON */
+.back{
+  display:inline-block;
+  margin-top:40px;
+  padding:10px 20px;
+  background:#e53935;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+}
+</style>
+
 </head>
 
 <body>
 
-<h1 id="title" class="gradient"></h1>
-<p id="content"></p>
+<div class="header">Thendral Foundation</div>
+
+<div class="container">
+  <h1 id="title" class="title"></h1>
+  <div class="meta">By Admin • Thendral Foundation</div>
+  <div id="content" class="content"></div>
+
+  <a href="index.html" class="back">← Back to Home</a>
+</div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const type = params.get("type");
 
-const data = {
-  detox: {
-    title:"Body Detox Program",
-    content:"This program helps cleanse your body naturally, improving liver and kidney function..."
-  },
-  mind: {
-    title:"Mind Energy Program",
-    content:"Enhances memory, focus and brain performance..."
-  },
-  kubera: {
-    title:"Kubera Yogam",
-    content:"Teaches financial discipline and wealth attraction..."
-  },
-  healing: {
-    title:"Healing Training",
-    content:"Focuses on spiritual and emotional healing..."
-  }
+const posts = {
+
+detox: {
+title: "Body Detox Program (21 Days)",
+content: `
+<h2>Introduction</h2>
+<p>The <span class="highlight">Body Detox Program</span> is designed to completely transform your physical health through natural methods. In today’s modern lifestyle, our bodies are constantly exposed to toxins from food, environment, and stress. This program focuses on cleansing your internal system and restoring balance.</p>
+
+<p>This 21-day journey helps improve liver function, kidney efficiency, digestion, and overall energy levels. It is not just a diet plan but a complete lifestyle transformation.</p>
+
+<h2>How Detox Works</h2>
+<p>Detoxification is the process of eliminating harmful substances from the body. The program uses natural foods, herbal drinks, and mindful practices to support this process. Your body already has detox organs like the liver and kidneys — this program enhances their efficiency.</p>
+
+<p>Participants follow a structured routine including hydration, plant-based meals, and breathing exercises. These elements help flush toxins and rejuvenate cells.</p>
+
+<h2>Benefits</h2>
+<p>People who complete the detox program often report increased energy, improved digestion, clearer skin, and better mental clarity. It also helps reduce stress and improves sleep patterns.</p>
+
+<p>The program is suitable for anyone looking to reset their health naturally without relying on chemicals or medications.</p>
+
+<h2>Long-Term Impact</h2>
+<p>Beyond the 21 days, participants gain knowledge about healthy eating and lifestyle habits. This ensures long-term benefits and sustainable wellness.</p>
+
+<p>Detox is not just about removing toxins — it is about building a stronger, healthier version of yourself.</p>
+`
+},
+
+mind: {
+title: "Mind Energy Program",
+content: `
+<h2>Overview</h2>
+<p>The <span class="highlight">Mind Energy Program</span> focuses on improving mental clarity, memory, and concentration. In a fast-paced world, maintaining focus has become challenging — this program provides practical techniques to overcome that.</p>
+
+<p>It combines breathing techniques, visualization, and brain exercises to enhance cognitive performance.</p>
+
+<h2>Key Techniques</h2>
+<p>Participants learn powerful methods to improve memory retention and decision-making. These include concentration drills, meditation, and mental discipline practices.</p>
+
+<p>Over time, the brain becomes sharper, and thinking becomes more structured and efficient.</p>
+
+<h2>Benefits</h2>
+<p>Students and professionals benefit greatly from this program. It improves productivity, reduces mental fatigue, and enhances learning ability.</p>
+
+<p>The program also builds confidence and emotional stability.</p>
+
+<h2>Transformation</h2>
+<p>With consistent practice, individuals experience a significant boost in their mental capabilities. This leads to better performance in academics, work, and daily life.</p>
+`
+},
+
+kubera: {
+title: "Kubera Yogam",
+content: `
+<h2>Introduction</h2>
+<p><span class="highlight">Kubera Yogam</span> is a unique program focused on financial growth and abundance mindset. It combines ancient wisdom with modern strategies.</p>
+
+<p>The program teaches how to attract wealth through discipline, mindset, and smart financial habits.</p>
+
+<h2>Core Concepts</h2>
+<p>Participants learn about money management, goal setting, and mindset transformation. It emphasizes consistency and long-term planning.</p>
+
+<p>The program also includes motivational sessions to build confidence.</p>
+
+<h2>Benefits</h2>
+<p>It helps individuals improve their financial situation and develop a positive relationship with money.</p>
+
+<p>Participants often experience better control over spending and increased savings.</p>
+
+<h2>Outcome</h2>
+<p>Kubera Yogam is not just about earning money — it’s about building a stable and prosperous life.</p>
+`
+},
+
+healing: {
+title: "Healing Training Program",
+content: `
+<h2>Overview</h2>
+<p>The <span class="highlight">Healing Training Program</span> focuses on emotional and spiritual well-being. It helps individuals release stress and achieve inner peace.</p>
+
+<p>This program is designed for those seeking balance in life.</p>
+
+<h2>Techniques</h2>
+<p>Participants learn meditation, breathing techniques, and energy healing methods.</p>
+
+<p>These practices help calm the mind and improve emotional stability.</p>
+
+<h2>Benefits</h2>
+<p>It reduces anxiety, improves focus, and enhances overall happiness.</p>
+
+<p>People feel more connected and peaceful.</p>
+
+<h2>Conclusion</h2>
+<p>This program leads to deep transformation and long-term well-being.</p>
+`
+}
+
 };
 
-document.getElementById("title").innerText = data[type].title;
-document.getElementById("content").innerText = data[type].content;
+document.getElementById("title").innerHTML = posts[type].title;
+document.getElementById("content").innerHTML = posts[type].content;
+
 </script>
 
 </body>
