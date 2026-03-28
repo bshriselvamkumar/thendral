@@ -1,100 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Post</title>
-  <link rel="stylesheet" href="style.css">
+<title>Post</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="post-container">
-  <h1 id="title" class="post-title"></h1>
-  <div id="content" class="post-content"></div>
+<div class="header">
+  <h2>Thendral Foundation</h2>
+</div>
 
-  <a href="index.html" class="back">← Back to Home</a>
+<div style="padding:40px; max-width:900px; margin:auto;">
+
+  <h1 id="title" class="gradient"></h1>
+  <div id="content"></div>
+
+  <br><br>
+  <a href="index.html">← Back</a>
+
 </div>
 
 <script>
-
 const params = new URLSearchParams(window.location.search);
 const type = params.get("type");
 
-/* SAFE CONTENT (NO BACKTICK BREAKING) */
 const posts = {
 
 detox: {
 title: "Body Detox Program (21 Days)",
 content:
-"<h2>Introduction</h2>" +
-"<p>The Body Detox Program is a powerful 21-day transformation designed to cleanse your system and restore balance. It focuses on natural healing and lifestyle improvement.</p>" +
+"<p>The Body Detox Program is a carefully designed 21-day transformation that focuses on cleansing the body from harmful toxins and restoring balance. In today’s modern lifestyle, the human body is constantly exposed to unhealthy food habits, pollution, stress, and irregular routines. Over time, these factors affect the digestive system, liver, kidneys, and overall energy levels.</p>" +
 
-"<p>This program helps eliminate toxins from the body and improves organ function, leading to better energy and health.</p>" +
+"<p>This detox program is created to help individuals reset their system naturally. It focuses on improving digestion, boosting metabolism, and enhancing the body’s natural healing abilities. Unlike temporary diets, this program builds long-term healthy habits that continue even after completion.</p>" +
 
-"<h2>Why Detox?</h2>" +
-"<p>Modern lifestyle leads to toxin accumulation. Detox helps reset the body and improve digestion, immunity, and mental clarity.</p>" +
+"<p>The detox process works by supporting the body’s natural organs responsible for cleansing. The liver filters toxins, the kidneys remove waste, and the digestive system processes nutrients efficiently. By following a structured routine of healthy foods, hydration, and mindful practices, the program strengthens these systems.</p>" +
 
-"<h2>Program Benefits</h2>" +
-"<p>• Improved digestion<br>• Better skin<br>• Increased energy<br>• Stronger immunity</p>" +
+"<p>Participants often experience significant improvements in energy levels, skin clarity, sleep quality, and mental focus. It also helps reduce stress and improves emotional well-being. The program is simple, natural, and suitable for people of all ages.</p>" +
 
-"<h2>Conclusion</h2>" +
-"<p>This program is not just a diet but a complete lifestyle reset.</p>"
+"<p>In the long term, detox is not just about removing toxins — it is about building a healthier lifestyle. Individuals learn better eating habits, discipline, and awareness of their body’s needs. This leads to sustainable wellness and a stronger immune system.</p>" +
+
+"<p>By the end of 21 days, most participants feel lighter, more energetic, and mentally refreshed. This program acts as a foundation for a healthier life, helping individuals maintain balance and vitality in their daily routine.</p>"
 },
 
 mind: {
 title: "Mind Energy Program",
 content:
-"<h2>Introduction</h2>" +
-"<p>The Mind Energy Program enhances mental clarity and focus through powerful techniques.</p>" +
+"<p>The Mind Energy Program is designed to enhance mental clarity, concentration, and overall brain performance. In today’s digital age, distractions are everywhere, making it difficult for individuals to focus and think clearly. This program provides structured techniques to overcome these challenges.</p>" +
 
-"<p>It trains your brain to perform better and improve memory.</p>" +
+"<p>The program focuses on strengthening the mind through meditation, breathing exercises, and concentration practices. These methods help train the brain to stay focused for longer periods and improve memory retention.</p>" +
 
-"<h2>Benefits</h2>" +
-"<p>• Better focus<br>• Sharp memory<br>• Mental peace</p>" +
+"<p>One of the key aspects of this program is mental discipline. Participants learn how to control their thoughts, reduce stress, and maintain a calm mindset. This is essential for improving decision-making and productivity.</p>" +
 
-"<h2>Conclusion</h2>" +
-"<p>This program helps unlock your true mental potential.</p>"
+"<p>Students benefit greatly as it improves their learning ability and academic performance. Professionals also gain advantages by becoming more efficient, organized, and confident in their work.</p>" +
+
+"<p>The program also addresses emotional stability. By reducing stress and anxiety, individuals can think more clearly and perform better in everyday situations. This leads to improved relationships and better communication skills.</p>" +
+
+"<p>With regular practice, participants experience long-term improvements in focus, creativity, and problem-solving skills. The Mind Energy Program is not just about intelligence — it is about unlocking the full potential of the brain.</p>"
 },
 
 kubera: {
 title: "Kubera Yogam",
 content:
-"<h2>Introduction</h2>" +
-"<p>Kubera Yogam is a prosperity program that teaches wealth attraction techniques.</p>" +
+"<p>Kubera Yogam is a unique program focused on financial growth, discipline, and abundance mindset. It combines practical financial strategies with mental conditioning techniques to help individuals achieve success.</p>" +
 
-"<p>It combines mindset and spiritual practices.</p>" +
+"<p>The program begins by addressing the mindset around money. Many people struggle financially because of limiting beliefs and lack of discipline. Kubera Yogam helps remove these barriers and replace them with confidence and clarity.</p>" +
 
-"<h2>Benefits</h2>" +
-"<p>• Financial growth<br>• Confidence<br>• Positive thinking</p>" +
+"<p>Participants learn essential financial skills such as budgeting, saving, and planning. These skills are important for building long-term stability and avoiding unnecessary financial stress.</p>" +
 
-"<h2>Conclusion</h2>" +
-"<p>It helps you attract abundance and success.</p>"
+"<p>The program also emphasizes consistency and discipline. Wealth is not created overnight — it requires continuous effort and smart decision-making. Kubera Yogam teaches how to stay focused on long-term goals.</p>" +
+
+"<p>Another important aspect is developing positive habits. Participants learn how to manage expenses, increase savings, and invest wisely. These habits lead to steady growth and financial security.</p>" +
+
+"<p>By the end of the program, individuals gain a clear understanding of financial management and develop confidence in handling money. Kubera Yogam is not just about earning wealth — it is about creating a stable and prosperous life.</p>"
 },
 
 healing: {
 title: "Healing Training Program",
 content:
-"<h2>Introduction</h2>" +
-"<p>This program focuses on emotional and spiritual healing.</p>" +
+"<p>The Healing Training Program focuses on emotional, mental, and spiritual well-being. In today’s stressful world, many people experience anxiety, negative thoughts, and emotional imbalance. This program helps individuals restore inner peace and stability.</p>" +
 
-"<p>It helps remove negative energy and restore balance.</p>" +
+"<p>The program uses techniques such as meditation, breathing exercises, and relaxation methods. These practices calm the mind and reduce stress, allowing individuals to feel more relaxed and focused.</p>" +
 
-"<h2>Benefits</h2>" +
-"<p>• Inner peace<br>• Emotional strength<br>• Spiritual growth</p>" +
+"<p>One of the main goals of this program is emotional healing. Participants learn how to manage negative emotions, let go of stress, and develop a positive mindset. This leads to better mental health and overall happiness.</p>" +
 
-"<h2>Conclusion</h2>" +
-"<p>A complete transformation of mind and soul.</p>"
+"<p>The program also improves relationships by enhancing communication and emotional understanding. When individuals are calm and balanced, they can interact better with others.</p>" +
+
+"<p>Spiritual growth is another important aspect. Participants become more aware of themselves and their surroundings, leading to a deeper sense of purpose and clarity.</p>" +
+
+"<p>By the end of the program, individuals experience a complete transformation in their mindset and emotional state. The Healing Training Program helps create a peaceful and balanced life.</p>"
 }
 
 };
 
-/* LOAD CONTENT */
 if(posts[type]){
-  document.getElementById("title").innerHTML = posts[type].title;
+  document.getElementById("title").innerText = posts[type].title;
   document.getElementById("content").innerHTML = posts[type].content;
 }else{
-  document.getElementById("title").innerHTML = "Post Not Found";
+  document.getElementById("title").innerText = "Post Not Found";
+  document.getElementById("content").innerHTML = "<p>No content available.</p>";
 }
-
 </script>
 
 </body>
