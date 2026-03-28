@@ -1,122 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Thendral Foundation</title>
-
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<div class="header">
   <h2>Thendral Foundation</h2>
 
-  <nav>
+  <div>
     <a href="#">Home</a>
     <a href="#">Programs</a>
-    <a href="#">Consultation</a>
-    <a href="#">Events</a>
-    <a href="#">Gallery</a>
-    <a href="#">Support</a>
-  </nav>
-
-  <div>
-    <button class="btn outline" onclick="openLogin()">Sign In</button>
-    <button class="btn red" onclick="openSignup()">Sign Up</button>
+    <a href="#">Contact</a>
   </div>
-</header>
+</div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1 class="gradient">Transform Life with Holistic Wellness</h1>
-    <p>Discover natural healing, spiritual guidance, and transformative programs.</p>
+<div class="hero">
+  <h1 class="gradient">Transform Life with Holistic Wellness</h1>
+  <p>Simple and clean UI</p>
+</div>
 
-    <div class="hero-buttons">
-      <button class="btn red">Explore Programs</button>
-      <button class="btn outline">Book Consultation</button>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMS -->
-<section class="programs">
-
-  <h2 class="section-title">Our Core Programs</h2>
-
-  <div class="card-container">
-
-    <!-- Detox -->
-    <a href="post.html?type=detox" class="card">
-      <h3>Body Detox Program</h3>
-      <p>21-day journey to cleanse your body naturally.</p>
-      <span class="btn">Learn More →</span>
-    </a>
-
-    <!-- Mind Energy -->
-    <a href="post.html?type=mind" class="card">
-      <h3>Mind Energy Program</h3>
-      <p>Boost memory and mental clarity.</p>
-      <span class="btn">Learn More →</span>
-    </a>
-
-    <!-- Kubera Yogam -->
-    <a href="post.html?type=kubera" class="card">
-      <h3>Kubera Yogam</h3>
-      <p>Wealth and abundance training.</p>
-      <span class="btn">Learn More →</span>
-    </a>
-
-  </div>
-
-  <!-- SECOND ROW -->
-  <div class="card-container">
-
-    <!-- Detox Info -->
-    <a href="post.html?type=detox" class="card dark">
-      <h3>Detox Program</h3>
-      <p>Improve liver, kidney & full body health.</p>
-    </a>
-
-    <!-- Kubera Info -->
-    <a href="post.html?type=kubera" class="card dark">
-      <h3>Kubera Yogam</h3>
-      <p>Learn wealth attraction techniques.</p>
-    </a>
-
-    <!-- Mind Energy Info -->
-    <a href="post.html?type=mind" class="card dark">
-      <h3>Mind Energy</h3>
-      <p>Improve focus and intelligence.</p>
-    </a>
-
-    <!-- Healing Training -->
-    <a href="post.html?type=healing" class="card dark">
-      <h3>Healing Training</h3>
-      <p>Spiritual healing and transformation.</p>
-    </a>
-
-  </div>
-
-</section>
+<!-- NAV -->
+<div class="nav">
+  <a href="#">ABOUT</a>
+  <a href="#">PROGRAMS</a>
+</div>
 
 <!-- POSTS -->
-<section class="posts">
+<div class="posts fade">
 
   <div class="column">
 
     <a href="post.html?type=detox" class="post">
       <h3 class="gradient">Detox Program</h3>
-      <p>Improve liver, kidney & full body health.</p>
+      <p>Improve body health</p>
     </a>
 
     <a href="post.html?type=mind" class="post">
       <h3 class="gradient">Mind Energy</h3>
-      <p>Improve focus and intelligence.</p>
+      <p>Improve focus</p>
     </a>
 
   </div>
@@ -125,50 +51,37 @@
 
     <a href="post.html?type=kubera" class="post">
       <h3 class="gradient">Kubera Yogam</h3>
-      <p>Learn wealth attraction techniques.</p>
+      <p>Wealth mindset</p>
     </a>
 
     <a href="post.html?type=healing" class="post">
       <h3 class="gradient">Healing Training</h3>
-      <p>Spiritual healing and transformation.</p>
+      <p>Spiritual healing</p>
     </a>
 
   </div>
 
-</section>
-
-<!-- GALLERY -->
-<section class="section">
-  <h2 class="gradient">Gallery</h2>
-
-  <div class="slider">
-    <div class="track">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div>
-    <h3>Thendral Foundation</h3>
-    <p>Helping people through natural healing.</p>
-  </div>
+<div class="footer">
+  <div>Thendral Foundation</div>
+  <div>Contact: info@email.com</div>
+</div>
 
-  <div>
-    <h3>Quick Links</h3>
-    <p>Programs</p>
-    <p>Consultation</p>
-  </div>
+<!-- SCROLL SCRIPT -->
+<script>
+const faders = document.querySelectorAll('.fade');
 
-  <div>
-    <h3>Contact</h3>
-    <p>Email: vidhimadhidhyanamaiyam@gmail.com</p>
-  </div>
-</footer>
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
-<script src="script.js"></script>
 </body>
 </html>
