@@ -1,102 +1,171 @@
-body{
-  margin:0;
-  font-family:Poppins;
-  background:#f8f9fb;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* HEADER */
-.header{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 60px;
-  background:#fff;
+/* BODY */
+body {
+  background: #f5f5f5;
+  color: #222;
 }
 
-nav a{
-  margin:0 15px;
-  text-decoration:none;
-  color:#333;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* BUTTONS */
-.btn{
-  padding:10px 20px;
-  border-radius:8px;
-  cursor:pointer;
+.navbar h1 {
+  font-size: 20px;
 }
 
-.red{background:#e53935;color:white}
-.outline{border:2px solid #e53935;color:#e53935;background:none}
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar .btn {
+  padding: 8px 15px;
+  border: 1px solid red;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.navbar .btn.red {
+  background: red;
+  color: white;
+}
 
 /* HERO */
-.hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  padding:0 80px;
-  background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 60px;
 }
 
-.gradient{
-  background:linear-gradient(90deg,#b56a00,#ff0000);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+.hero-text h2 {
+  font-size: 55px;
+  font-weight: bold;
+  background: linear-gradient(90deg, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero h1{font-size:60px}
-
-/* CARDS */
-.cards{
-  display:flex;
-  justify-content:center;
-  gap:30px;
+.hero-text p {
+  margin: 20px 0;
 }
 
-.card{
-  background:white;
-  padding:30px;
-  border-radius:10px;
-  width:250px;
-  transition:0.3s;
+.hero-buttons .btn {
+  padding: 12px 20px;
+  margin-right: 10px;
+  border-radius: 6px;
 }
 
-.card:hover{
-  transform:translateY(-10px);
+.btn.red {
+  background: red;
+  color: white;
 }
 
-/* POSTS */
-.posts{
-  display:flex;
-  padding:50px;
+.btn.outline {
+  border: 2px solid red;
+  color: red;
 }
 
-.column{width:50%}
-
-.post{
-  display:block;
-  background:black;
-  color:white;
-  padding:20px;
-  margin:10px;
-  border-radius:10px;
-  text-decoration:none;
+/* PROGRAMS */
+.programs {
+  padding: 60px 40px;
 }
 
-/* SLIDER */
-.slider{overflow:hidden}
-.track{display:flex;animation:slide 10s infinite}
-.track img{width:300px;margin:10px}
-
-@keyframes slide{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* FOOTER */
-.footer{
-  background:#0d1b2a;
-  color:white;
-  padding:40px;
-  display:flex;
-  justify-content:space-between;
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(255,0,0,0.2);
+}
+
+.card.dark {
+  background: black;
+  color: white;
+}
+
+.card.dark p {
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: linear-gradient(90deg, red, orange);
+  color: white;
+  border-radius: 6px;
+}
+
+/* POST PAGE */
+.post-container {
+  max-width: 900px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.post-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.post-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.post-content h2 {
+  margin: 25px 0 10px;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
 }
