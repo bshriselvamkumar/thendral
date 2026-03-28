@@ -1,246 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Post</title>
-
-<style>
-body{
-  margin:0;
-  font-family: 'Poppins', sans-serif;
-  background:#f5f6fa;
-  line-height:1.8;
-}
-
-/* HEADER */
-.header{
-  background:#fff;
-  padding:20px 60px;
-  font-weight:bold;
-  font-size:22px;
-}
-
-/* CONTAINER */
-.container{
-  max-width:900px;
-  margin:50px auto;
-  background:#fff;
-  padding:40px;
-  border-radius:12px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-/* TITLE */
-.title{
-  font-size:42px;
-  font-weight:700;
-  margin-bottom:20px;
-
-  background:linear-gradient(90deg,#ff512f,#dd2476);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* SUBTEXT */
-.meta{
-  color:#777;
-  margin-bottom:30px;
-}
-
-/* CONTENT */
-.content{
-  font-size:18px;
-  color:#333;
-}
-
-/* GRADIENT HIGHLIGHT */
-.highlight{
-  background:linear-gradient(90deg,#ff512f,#f09819);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  font-weight:bold;
-}
-
-/* SECTION HEADINGS */
-h2{
-  margin-top:30px;
-  font-size:26px;
-
-  background:linear-gradient(90deg,#36d1dc,#5b86e5);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* BACK BUTTON */
-.back{
-  display:inline-block;
-  margin-top:40px;
-  padding:10px 20px;
-  background:#e53935;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-}
-</style>
-
+  <title>Post</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="header">Thendral Foundation</div>
-
-<div class="container">
-  <h1 id="title" class="title"></h1>
-  <div class="meta">By Admin • Thendral Foundation</div>
-  <div id="content" class="content"></div>
+<div class="post-container">
+  <h1 id="title" class="post-title"></h1>
+  <div id="content" class="post-content"></div>
 
   <a href="index.html" class="back">← Back to Home</a>
 </div>
 
 <script>
+
 const params = new URLSearchParams(window.location.search);
 const type = params.get("type");
 
+/* SAFE CONTENT (NO BACKTICK BREAKING) */
 const posts = {
 
 detox: {
 title: "Body Detox Program (21 Days)",
-content: `
+content:
+"<h2>Introduction</h2>" +
+"<p>The Body Detox Program is a powerful 21-day transformation designed to cleanse your system and restore balance. It focuses on natural healing and lifestyle improvement.</p>" +
 
-<h2>Introduction</h2>
-<p>The <span class="highlight">Body Detox Program</span> is a scientifically structured 21-day journey designed to cleanse your body from internal toxins and restore natural balance. In today’s fast-paced world, our bodies accumulate harmful substances from processed foods, pollution, stress, and unhealthy habits.</p>
+"<p>This program helps eliminate toxins from the body and improves organ function, leading to better energy and health.</p>" +
 
-<p>This program focuses on eliminating toxins naturally while strengthening the body's internal systems. It is not just a diet — it is a complete lifestyle reset that improves physical, mental, and emotional well-being.</p>
+"<h2>Why Detox?</h2>" +
+"<p>Modern lifestyle leads to toxin accumulation. Detox helps reset the body and improve digestion, immunity, and mental clarity.</p>" +
 
-<h2>Why Detox is Important</h2>
-<p>Over time, toxins accumulate in the liver, kidneys, and digestive system, affecting overall health. This leads to fatigue, poor digestion, skin issues, and low immunity.</p>
+"<h2>Program Benefits</h2>" +
+"<p>• Improved digestion<br>• Better skin<br>• Increased energy<br>• Stronger immunity</p>" +
 
-<p>Detoxification helps remove these harmful substances and improves organ efficiency. It allows your body to function at its best, improving energy levels and overall vitality.</p>
-
-<h2>How the Program Works</h2>
-<p>The program follows a structured daily routine that includes hydration, natural foods, herbal drinks, and breathing techniques. These elements work together to cleanse the body gently and effectively.</p>
-
-<p>Participants are guided step-by-step, ensuring that the detox process is safe and sustainable. The focus is on long-term benefits rather than quick fixes.</p>
-
-<h2>Key Benefits</h2>
-<p>People who complete this program often experience improved digestion, increased energy, better sleep, and clearer skin. It also helps reduce stress and enhances mental clarity.</p>
-
-<p>The detox program strengthens immunity and prepares the body to resist diseases naturally.</p>
-
-<h2>Long-Term Transformation</h2>
-<p>Beyond the 21 days, participants develop healthy habits that last a lifetime. They gain knowledge about nutrition, hydration, and lifestyle choices.</p>
-
-<p>The goal is not just detox — but to create a stronger, healthier, and more balanced version of yourself.</p>
-
-<h2>Conclusion</h2>
-<p>This program is ideal for anyone looking to reset their health naturally. It empowers individuals to take control of their well-being and live a healthier life.</p>
-
-`
+"<h2>Conclusion</h2>" +
+"<p>This program is not just a diet but a complete lifestyle reset.</p>"
 },
 
 mind: {
 title: "Mind Energy Program",
-content: `
+content:
+"<h2>Introduction</h2>" +
+"<p>The Mind Energy Program enhances mental clarity and focus through powerful techniques.</p>" +
 
-<h2>Introduction</h2>
-<p>The <span class="highlight">Mind Energy Program</span> is designed to enhance mental clarity, focus, and cognitive performance. In a world filled with distractions, maintaining concentration has become one of the biggest challenges.</p>
+"<p>It trains your brain to perform better and improve memory.</p>" +
 
-<p>This program provides powerful techniques to improve memory, focus, and mental discipline, helping individuals achieve success in both personal and professional life.</p>
+"<h2>Benefits</h2>" +
+"<p>• Better focus<br>• Sharp memory<br>• Mental peace</p>" +
 
-<h2>Understanding Mind Energy</h2>
-<p>Mind energy refers to the ability to control thoughts, emotions, and focus. A strong mind leads to better decision-making, increased productivity, and improved confidence.</p>
-
-<p>This program trains the brain to function efficiently and eliminates mental clutter.</p>
-
-<h2>Techniques Used</h2>
-<p>The program includes concentration exercises, meditation, visualization techniques, and breathing practices. These methods strengthen neural connections and improve brain performance.</p>
-
-<p>Participants learn how to stay focused for longer periods and avoid distractions.</p>
-
-<h2>Benefits</h2>
-<p>Students and professionals benefit greatly from this program. It improves learning ability, memory retention, and problem-solving skills.</p>
-
-<p>It also reduces stress and enhances emotional stability, leading to a balanced mindset.</p>
-
-<h2>Real-Life Impact</h2>
-<p>People who follow this program report better academic performance, improved work efficiency, and stronger confidence.</p>
-
-<p>It helps individuals achieve their goals faster by maintaining clarity and focus.</p>
-
-<h2>Conclusion</h2>
-<p>The Mind Energy Program is not just about intelligence — it is about mastering your thoughts and unlocking your full potential.</p>
-
-`
+"<h2>Conclusion</h2>" +
+"<p>This program helps unlock your true mental potential.</p>"
 },
 
 kubera: {
 title: "Kubera Yogam",
-content: `
+content:
+"<h2>Introduction</h2>" +
+"<p>Kubera Yogam is a prosperity program that teaches wealth attraction techniques.</p>" +
 
-<h2>Introduction</h2>
-<p><span class="highlight">Kubera Yogam</span> is a unique program focused on wealth creation, financial discipline, and abundance mindset. It combines ancient wisdom with modern financial strategies.</p>
+"<p>It combines mindset and spiritual practices.</p>" +
 
-<p>This program teaches how to attract wealth through consistent actions, smart planning, and a positive mindset.</p>
+"<h2>Benefits</h2>" +
+"<p>• Financial growth<br>• Confidence<br>• Positive thinking</p>" +
 
-<h2>Wealth Mindset</h2>
-<p>The first step to financial success is developing the right mindset. Many people struggle financially because of limiting beliefs.</p>
-
-<p>Kubera Yogam helps eliminate these beliefs and replaces them with confidence and clarity.</p>
-
-<h2>Financial Discipline</h2>
-<p>Participants learn how to manage money effectively, save wisely, and invest strategically. The program emphasizes long-term growth over short-term gains.</p>
-
-<p>It teaches practical methods to build financial stability.</p>
-
-<h2>Attraction Principles</h2>
-<p>The program introduces techniques to align thoughts and actions with financial goals. It focuses on consistency, discipline, and smart decision-making.</p>
-
-<p>This creates a strong foundation for wealth creation.</p>
-
-<h2>Benefits</h2>
-<p>Participants experience improved financial habits, better savings, and increased confidence in handling money.</p>
-
-<p>It also reduces financial stress and builds a sense of security.</p>
-
-<h2>Conclusion</h2>
-<p>Kubera Yogam is not just about earning money — it is about creating a sustainable and prosperous life.</p>
-
-`
+"<h2>Conclusion</h2>" +
+"<p>It helps you attract abundance and success.</p>"
 },
 
 healing: {
 title: "Healing Training Program",
-content: `
+content:
+"<h2>Introduction</h2>" +
+"<p>This program focuses on emotional and spiritual healing.</p>" +
 
-<h2>Introduction</h2>
-<p>The <span class="highlight">Healing Training Program</span> focuses on emotional, mental, and spiritual well-being. In today’s stressful world, people often neglect inner peace and emotional balance.</p>
+"<p>It helps remove negative energy and restore balance.</p>" +
 
-<p>This program helps individuals reconnect with themselves and achieve deep healing.</p>
+"<h2>Benefits</h2>" +
+"<p>• Inner peace<br>• Emotional strength<br>• Spiritual growth</p>" +
 
-<h2>Understanding Healing</h2>
-<p>Healing is not just physical — it involves emotional and mental recovery as well. This program addresses all aspects of well-being.</p>
-
-<p>It helps individuals release stress, trauma, and negative emotions.</p>
-
-<h2>Techniques</h2>
-<p>The program includes meditation, breathing exercises, and energy healing techniques. These practices calm the mind and improve emotional stability.</p>
-
-<p>Participants learn how to maintain inner peace even in challenging situations.</p>
-
-<h2>Benefits</h2>
-<p>It reduces anxiety, improves focus, and enhances overall happiness. People feel more relaxed and connected.</p>
-
-<p>The program also improves relationships and communication.</p>
-
-<h2>Transformation</h2>
-<p>With consistent practice, individuals experience deep personal growth and clarity.</p>
-
-<p>It leads to a more peaceful and balanced life.</p>
-
-<h2>Conclusion</h2>
-<p>This program is perfect for anyone seeking emotional healing and inner transformation.</p>
-
-`
+"<h2>Conclusion</h2>" +
+"<p>A complete transformation of mind and soul.</p>"
 }
 
 };
+
+/* LOAD CONTENT */
+if(posts[type]){
+  document.getElementById("title").innerHTML = posts[type].title;
+  document.getElementById("content").innerHTML = posts[type].content;
+}else{
+  document.getElementById("title").innerHTML = "Post Not Found";
+}
+
+</script>
+
+</body>
+</html>
