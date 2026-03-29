@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup</title>
+<script src="auth.js"></script>
+
+<style>
+body {
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f6f8;
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+  <h2>Sign Up</h2>
+
+  <input id="signupUser" placeholder="Username">
+  <input id="signupPass" type="password" placeholder="Password">
+
+  <button onclick="signup()">Sign Up</button>
+</div>
+
+</body>
+</html>
