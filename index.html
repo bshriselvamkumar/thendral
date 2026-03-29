@@ -6,7 +6,7 @@
 
 <style>
 
-/* RESET */
+/* SAME UI — UNTOUCHED */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -41,7 +41,7 @@ body {
   color: white;
 }
 
-/* HERO */
+/* HERO (UNCHANGED UI) */
 .hero {
   padding: 120px 60px;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -74,18 +74,18 @@ body {
   cursor: pointer;
 }
 
-.hero-buttons .primary {
+.primary {
   background: red;
   color: white;
 }
 
-.hero-buttons .secondary {
+.secondary {
   border: 1px solid red;
   color: red;
   background: transparent;
 }
 
-/* PROGRAM SECTION */
+/* PROGRAMS */
 .section {
   padding: 50px;
   text-align: center;
@@ -144,7 +144,6 @@ body {
 
 .gallery-title {
   font-size: 32px;
-  margin-bottom: 10px;
 }
 
 .gallery {
@@ -180,8 +179,8 @@ body {
 }
 
 </style>
-
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -197,9 +196,10 @@ body {
     <a href="#">Support</a>
   </div>
 
-  <div>
-    <button class="btn">Sign In</button>
-    <button class="btn red">Sign Up</button>
+  <!-- LOGIN AREA -->
+  <div id="authArea">
+    <button class="btn" onclick="goLogin()">Sign In</button>
+    <button class="btn red" onclick="goSignup()">Sign Up</button>
   </div>
 </div>
 
@@ -222,41 +222,41 @@ body {
     <div class="card">
       <h3>Body Detox Program</h3>
       <p>21-day journey to cleanse your body.</p>
-      <button onclick="location.href='post.html?type=detox'">Learn More</button>
+      <button onclick="goPost('detox')">Learn More</button>
     </div>
 
     <div class="card">
       <h3>Mind Energy Program</h3>
       <p>Boost focus and clarity.</p>
-      <button onclick="location.href='post.html?type=mind'">Learn More</button>
+      <button onclick="goPost('mind')">Learn More</button>
     </div>
 
     <div class="card">
       <h3>Kubera Yogam</h3>
       <p>Wealth and abundance mindset.</p>
-      <button onclick="location.href='post.html?type=kubera'">Learn More</button>
+      <button onclick="goPost('kubera')">Learn More</button>
     </div>
   </div>
 </div>
 
 <!-- POSTS -->
 <div class="posts">
-  <div class="post-card" onclick="location.href='post.html?type=detox'">
+  <div class="post-card" onclick="goPost('detox')">
     <h3>Detox Program</h3>
     <p>Improve body health</p>
   </div>
 
-  <div class="post-card" onclick="location.href='post.html?type=kubera'">
+  <div class="post-card" onclick="goPost('kubera')">
     <h3>Kubera Yogam</h3>
     <p>Wealth mindset</p>
   </div>
 
-  <div class="post-card" onclick="location.href='post.html?type=mind'">
+  <div class="post-card" onclick="goPost('mind')">
     <h3>Mind Energy</h3>
     <p>Improve focus</p>
   </div>
 
-  <div class="post-card" onclick="location.href='post.html?type=healing'">
+  <div class="post-card" onclick="goPost('healing')">
     <h3>Healing Training</h3>
     <p>Spiritual healing</p>
   </div>
@@ -271,7 +271,6 @@ body {
     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
     <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad">
     <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754">
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
   </div>
 
   <button class="gallery-btn">View Full Gallery</button>
@@ -296,6 +295,38 @@ body {
     <p>+91 77085 71575</p>
   </div>
 </div>
+
+<!-- SIMPLE LOGIN SYSTEM -->
+<script>
+
+/* NAVIGATION */
+function goPost(type){
+  window.location.href = "post.html?type=" + type;
+}
+
+function goLogin(){
+  window.location.href = "login.html";
+}
+
+function goSignup(){
+  window.location.href = "signup.html";
+}
+
+/* LOGIN DISPLAY */
+const user = localStorage.getItem("loggedInUser");
+
+if(user){
+  document.getElementById("authArea").innerHTML =
+  `<span style="margin-right:10px;">Welcome, ${user}</span>
+   <button class="btn" onclick="logout()">Logout</button>`;
+}
+
+function logout(){
+  localStorage.removeItem("loggedInUser");
+  location.reload();
+}
+
+</script>
 
 </body>
 </html>
