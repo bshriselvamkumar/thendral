@@ -1,106 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Post</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Body Detox Program</title>
+
+<style>
+
+/* BODY */
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f4f6f8;
+}
+
+/* NAVBAR (SAME STYLE) */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:white;
+  border-bottom:1px solid #ddd;
+}
+
+/* HERO */
+.hero{
+  background: linear-gradient(135deg,#ff3c00,#ff7a00);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  margin-top:10px;
+  line-height:1.6;
+}
+
+/* SEARCH BAR */
+.search-bar{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+}
+
+.search-bar input{
+  width:300px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.search-bar select{
+  padding:12px;
+  border-radius:8px;
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  gap:20px;
+  padding:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:300px;
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+/* IMAGE */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* CONTENT */
+.card-content{
+  padding:15px;
+}
+
+.badge{
+  background:#8b5cf6;
+  color:white;
+  padding:5px 10px;
+  border-radius:10px;
+  font-size:12px;
+}
+
+.free{
+  background:#22c55e;
+  float:right;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+/* MAIN CONTENT */
+.container{
+  max-width:900px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  margin-top:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.container h2{
+  margin-top:20px;
+}
+
+.highlight{
+  color:#ff3c00;
+  font-weight:bold;
+}
+
+/* BACK BUTTON */
+.back{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 15px;
+  background:red;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="header">
+<!-- NAVBAR -->
+<div class="navbar">
   <h2>Thendral Foundation</h2>
 </div>
 
-<div style="padding:40px; max-width:900px; margin:auto;">
+<!-- HERO -->
+<div class="hero">
+  <h1>Transformative Wellness Programs</h1>
+  <p>
+    Choose from our carefully designed programs that help detox your body,
+    improve health, and bring natural balance to your life.
+  </p>
+</div>
 
-  <h1 id="title" class="gradient"></h1>
-  <div id="content"></div>
+<!-- SEARCH -->
+<div class="search-bar">
+  <input placeholder="Search programs...">
+  <select>
+    <option>All Programs</option>
+  </select>
+</div>
 
-  <br><br>
-  <a href="index.html">← Back</a>
+<!-- PROGRAM CARDS -->
+<div class="cards">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+    <div class="card-content">
+      <span class="badge">Special</span>
+      <span class="badge free">FREE</span>
+      <h3>Body Detox Training</h3>
+      <p>Cleanse and restore your body naturally.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+    <div class="card-content">
+      <span class="badge">Special</span>
+      <span class="badge free">FREE</span>
+      <h3>Health Awareness Session</h3>
+      <p>Understand toxins and their impact.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad">
+    <div class="card-content">
+      <span class="badge">Special</span>
+      <span class="badge free">FREE</span>
+      <h3>Lifestyle Reset Program</h3>
+      <p>Build healthy daily habits.</p>
+    </div>
+  </div>
 
 </div>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-const type = params.get("type");
+<!-- MAIN POST CONTENT -->
+<div class="container">
 
-const posts = {
+<h1>Body Detox Program (21 Days)</h1>
 
-detox: {
-title: "Body Detox Program (21 Days)",
-content:
-"<p>The Body Detox Program is a carefully designed 21-day transformation that focuses on cleansing the body from harmful toxins and restoring balance. In today’s modern lifestyle, the human body is constantly exposed to unhealthy food habits, pollution, stress, and irregular routines. Over time, these factors affect the digestive system, liver, kidneys, and overall energy levels.</p>" +
+<p>
+The <span class="highlight">Body Detox Program</span> is a complete wellness journey designed to remove toxins and restore natural health.
+This program focuses on improving digestion, boosting immunity, and enhancing overall vitality.
+</p>
 
-"<p>This detox program is created to help individuals reset their system naturally. It focuses on improving digestion, boosting metabolism, and enhancing the body’s natural healing abilities. Unlike temporary diets, this program builds long-term healthy habits that continue even after completion.</p>" +
+<h2>Why Detox?</h2>
+<p>
+Modern lifestyles expose our bodies to toxins from food, stress, and pollution.
+Detoxification helps the body cleanse itself and function efficiently.
+</p>
 
-"<p>The detox process works by supporting the body’s natural organs responsible for cleansing. The liver filters toxins, the kidneys remove waste, and the digestive system processes nutrients efficiently. By following a structured routine of healthy foods, hydration, and mindful practices, the program strengthens these systems.</p>" +
+<h2>Benefits</h2>
+<p>
+✔ Better digestion  
+✔ Increased energy  
+✔ Clear skin  
+✔ Strong immunity  
+✔ Mental clarity  
+</p>
 
-"<p>Participants often experience significant improvements in energy levels, skin clarity, sleep quality, and mental focus. It also helps reduce stress and improves emotional well-being. The program is simple, natural, and suitable for people of all ages.</p>" +
+<h2>How It Works</h2>
+<p>
+The program includes natural foods, hydration techniques, breathing exercises,
+and guided routines that help cleanse the body safely.
+</p>
 
-"<p>In the long term, detox is not just about removing toxins — it is about building a healthier lifestyle. Individuals learn better eating habits, discipline, and awareness of their body’s needs. This leads to sustainable wellness and a stronger immune system.</p>" +
+<h2>Who Can Join?</h2>
+<p>
+Anyone looking to improve their health, reduce fatigue, or start a healthier lifestyle can benefit.
+</p>
 
-"<p>By the end of 21 days, most participants feel lighter, more energetic, and mentally refreshed. This program acts as a foundation for a healthier life, helping individuals maintain balance and vitality in their daily routine.</p>"
-},
+<a href="index.html" class="back">← Back to Home</a>
 
-mind: {
-title: "Mind Energy Program",
-content:
-"<p>The Mind Energy Program is designed to enhance mental clarity, concentration, and overall brain performance. In today’s digital age, distractions are everywhere, making it difficult for individuals to focus and think clearly. This program provides structured techniques to overcome these challenges.</p>" +
-
-"<p>The program focuses on strengthening the mind through meditation, breathing exercises, and concentration practices. These methods help train the brain to stay focused for longer periods and improve memory retention.</p>" +
-
-"<p>One of the key aspects of this program is mental discipline. Participants learn how to control their thoughts, reduce stress, and maintain a calm mindset. This is essential for improving decision-making and productivity.</p>" +
-
-"<p>Students benefit greatly as it improves their learning ability and academic performance. Professionals also gain advantages by becoming more efficient, organized, and confident in their work.</p>" +
-
-"<p>The program also addresses emotional stability. By reducing stress and anxiety, individuals can think more clearly and perform better in everyday situations. This leads to improved relationships and better communication skills.</p>" +
-
-"<p>With regular practice, participants experience long-term improvements in focus, creativity, and problem-solving skills. The Mind Energy Program is not just about intelligence — it is about unlocking the full potential of the brain.</p>"
-},
-
-kubera: {
-title: "Kubera Yogam",
-content:
-"<p>Kubera Yogam is a unique program focused on financial growth, discipline, and abundance mindset. It combines practical financial strategies with mental conditioning techniques to help individuals achieve success.</p>" +
-
-"<p>The program begins by addressing the mindset around money. Many people struggle financially because of limiting beliefs and lack of discipline. Kubera Yogam helps remove these barriers and replace them with confidence and clarity.</p>" +
-
-"<p>Participants learn essential financial skills such as budgeting, saving, and planning. These skills are important for building long-term stability and avoiding unnecessary financial stress.</p>" +
-
-"<p>The program also emphasizes consistency and discipline. Wealth is not created overnight — it requires continuous effort and smart decision-making. Kubera Yogam teaches how to stay focused on long-term goals.</p>" +
-
-"<p>Another important aspect is developing positive habits. Participants learn how to manage expenses, increase savings, and invest wisely. These habits lead to steady growth and financial security.</p>" +
-
-"<p>By the end of the program, individuals gain a clear understanding of financial management and develop confidence in handling money. Kubera Yogam is not just about earning wealth — it is about creating a stable and prosperous life.</p>"
-},
-
-healing: {
-title: "Healing Training Program",
-content:
-"<p>The Healing Training Program focuses on emotional, mental, and spiritual well-being. In today’s stressful world, many people experience anxiety, negative thoughts, and emotional imbalance. This program helps individuals restore inner peace and stability.</p>" +
-
-"<p>The program uses techniques such as meditation, breathing exercises, and relaxation methods. These practices calm the mind and reduce stress, allowing individuals to feel more relaxed and focused.</p>" +
-
-"<p>One of the main goals of this program is emotional healing. Participants learn how to manage negative emotions, let go of stress, and develop a positive mindset. This leads to better mental health and overall happiness.</p>" +
-
-"<p>The program also improves relationships by enhancing communication and emotional understanding. When individuals are calm and balanced, they can interact better with others.</p>" +
-
-"<p>Spiritual growth is another important aspect. Participants become more aware of themselves and their surroundings, leading to a deeper sense of purpose and clarity.</p>" +
-
-"<p>By the end of the program, individuals experience a complete transformation in their mindset and emotional state. The Healing Training Program helps create a peaceful and balanced life.</p>"
-}
-
-};
-
-if(posts[type]){
-  document.getElementById("title").innerText = posts[type].title;
-  document.getElementById("content").innerHTML = posts[type].content;
-}else{
-  document.getElementById("title").innerText = "Post Not Found";
-  document.getElementById("content").innerHTML = "<p>No content available.</p>";
-}
-</script>
+</div>
 
 </body>
 </html>
