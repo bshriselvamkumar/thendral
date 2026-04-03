@@ -85,36 +85,43 @@ body {
   background: transparent;
 }
 
-/* PROGRAMS */
-.section {
-  padding: 50px;
-  text-align: center;
-}
+<section class="programs">
+  <h2 class="section-title">Our Core Programs</h2>
 
-.programs {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+  <div class="program-grid">
 
-.card {
-  width: 250px;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+    <!-- CARD 1 -->
+    <div class="program-card">
+      <div class="icon red">❤️</div>
+      <h3>Body Detox Program</h3>
+      <p>
+        A comprehensive 21-day journey to cleanse and rejuvenate your body naturally.
+      </p>
+      <a href="post.html?type=detox" class="btn">Learn More →</a>
+    </div>
 
-.card button {
-  margin-top: 15px;
-  padding: 10px;
-  border: 1px solid red;
-  background: transparent;
-  color: red;
-  border-radius: 6px;
-}
+    <!-- CARD 2 -->
+    <div class="program-card">
+      <div class="icon yellow">⚡</div>
+      <h3>Mind Energy Program</h3>
+      <p>
+        Enhance mental clarity and boost your cognitive abilities through proven techniques.
+      </p>
+      <a href="post.html?type=mind" class="btn">Learn More →</a>
+    </div>
 
+    <!-- CARD 3 -->
+    <div class="program-card">
+      <div class="icon orange">🛡️</div>
+      <h3>Kubera Yogam</h3>
+      <p>
+        Ancient prosperity and abundance program for holistic wealth creation.
+      </p>
+      <a href="post.html?type=kubera" class="btn">Learn More →</a>
+    </div>
+
+  </div>
+</section>
 /* POSTS */
 .posts {
   display: grid;
