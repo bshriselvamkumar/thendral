@@ -1,400 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Thendral Foundation</title>
-
-<style>
-
-/* SAME UI — UNTOUCHED */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: white;
-  border-bottom: 1px solid #ddd;
-}
-
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: black;
-}
-
-.btn {
-  padding: 8px 15px;
-  border-radius: 6px;
-  border: 1px solid red;
-  color: red;
-  background: transparent;
-}
-
-.btn.red {
-  background: red;
-  color: white;
-}
-
-/* HERO (UNCHANGED UI) */
-.hero {
-  padding: 120px 60px;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.hero span {
-  color: #ff4b2b;
-}
-
-.hero p {
-  margin-top: 15px;
-}
-
-.hero-buttons {
-  margin-top: 20px;
-}
-
-.hero-buttons button {
-  padding: 12px 20px;
-  margin-right: 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.primary {
-  background: red;
-  color: white;
-}
-
-.secondary {
-  border: 1px solid red;
-  color: red;
-  background: transparent;
-}
-
-<section class="programs">
-  <h2 class="section-title">Our Core Programs</h2>
-
-  <div class="program-grid">
-
-    <!-- CARD 1 -->
-    <div class="program-card">
-      <div class="icon red">❤️</div>
-      <h3>Body Detox Program</h3>
-      <p>
-        A comprehensive 21-day journey to cleanse and rejuvenate your body naturally.
-      </p>
-      <a href="post.html?type=detox" class="btn">Learn More →</a>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="program-card">
-      <div class="icon yellow">⚡</div>
-      <h3>Mind Energy Program</h3>
-      <p>
-        Enhance mental clarity and boost your cognitive abilities through proven techniques.
-      </p>
-      <a href="post.html?type=mind" class="btn">Learn More →</a>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="program-card">
-      <div class="icon orange">🛡️</div>
-      <h3>Kubera Yogam</h3>
-      <p>
-        Ancient prosperity and abundance program for holistic wealth creation.
-      </p>
-      <a href="post.html?type=kubera" class="btn">Learn More →</a>
-    </div>
-
-  </div>
-</section>
-/* POSTS */
-.posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 40px;
-}
-
-.post-card {
-  background: black;
-  color: white;
-  padding: 25px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.post-card:hover {
-  transform: scale(1.03);
-}
-
-/* GALLERY */
-.gallery-section {
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.gallery-title {
-  font-size: 32px;
-}
-
-.gallery {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.gallery-btn {
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: red;
-  color: white;
-  border: none;
-  border-radius: 6px;
-}
-
-/* FOOTER */
-.footer {
-  background: #0b1c2c;
-  color: white;
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-}
-
-</style>
+  <title>Thendral Foundation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <h2>Thendral Foundation</h2>
-
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Programs</a>
-    <a href="#">Consultation</a>
-    <a href="#">Events</a>
-    <a href="#">Gallery</a>
-    <a href="#">Support</a>
-  </div>
-
-  <!-- LOGIN AREA -->
-  <div id="authArea">
-    <button class="btn" onclick="goLogin()">Sign In</button>
-    <button class="btn red" onclick="goSignup()">Sign Up</button>
-  </div>
-</div>
-
 <!-- HERO -->
-<div class="hero">
-  <h1>Transform Life with <span>Holistic Wellness</span></h1>
-  <p>Welcome to Thendral Foundation.</p>
-
-  <div class="hero-buttons">
-    <button class="primary">Explore Programs</button>
-    <button class="secondary">Book Consultation</button>
-  </div>
-</div>
-
-<section class="programs">
-  <h2 class="section-title">Our Core Programs</h2>
-
-  <div class="program-grid">
-
-    <!-- CARD 1 -->
-    <div class="program-card">
-      <div class="icon red">❤️</div>
-      <h3>Body Detox Program</h3>
-      <p>
-        A comprehensive 21-day journey to cleanse and rejuvenate your body naturally.
-      </p>
-      <a href="post.html?type=detox" class="btn">Learn More →</a>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="program-card">
-      <div class="icon yellow">⚡</div>
-      <h3>Mind Energy Program</h3>
-      <p>
-        Enhance mental clarity and boost your cognitive abilities through proven techniques.
-      </p>
-      <a href="post.html?type=mind" class="btn">Learn More →</a>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="program-card">
-      <div class="icon orange">🛡️</div>
-      <h3>Kubera Yogam</h3>
-      <p>
-        Ancient prosperity and abundance program for holistic wealth creation.
-      </p>
-      <a href="post.html?type=kubera" class="btn">Learn More →</a>
-    </div>
-
-  </div>
+<section class="hero">
+  <h1>Transform Life with Holistic Wellness</h1>
+  <p>Simple and clean UI</p>
 </section>
 
-<!-- POSTS -->
-<div class="posts">
-  <div class="post-card" onclick="goPost('detox')">
+<!-- NAV -->
+<nav>
+  <a href="#">ABOUT</a>
+  <a href="#">PROGRAMS</a>
+</nav>
+
+<!-- PROGRAMS -->
+<section class="programs">
+
+  <div class="card">
     <h3>Detox Program</h3>
     <p>Improve body health</p>
   </div>
 
-  <div class="post-card" onclick="goPost('kubera')">
+  <div class="card">
     <h3>Kubera Yogam</h3>
     <p>Wealth mindset</p>
   </div>
 
-  <div class="post-card" onclick="goPost('mind')">
+  <div class="card">
     <h3>Mind Energy</h3>
     <p>Improve focus</p>
   </div>
 
-  <div class="post-card" onclick="goPost('healing')">
+  <div class="card">
     <h3>Healing Training</h3>
     <p>Spiritual healing</p>
   </div>
-</div>
 
-<!-- GALLERY -->
-<div class="gallery-section">
-  <h2 class="gallery-title">Gallery</h2>
-
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad">
-    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754">
-  </div>
-
-  <button class="gallery-btn">View Full Gallery</button>
-</div>
+</section>
 
 <!-- FOOTER -->
-<div class="footer" style="
-  background:#0b1c2c;
-  color:white;
-  padding:60px 50px 30px;
-  display:flex;
-  flex-direction:column;
-">
-
-  <div style="display:flex; justify-content:space-between; flex-wrap:wrap;">
-
-    <!-- LEFT -->
-    <div style="max-width:350px;">
-      <h3 style="margin-bottom:10px;">Thendral Foundation</h3>
-
-      <p style="line-height:1.6; color:#cbd5e1;">
-        Thendral Foundation Vidhi Madhi Dhyana Maiyam is a non-religious,
-        non-profit public service organization dedicated to human well-being
-        through natural living, training, and courses in detox, Kubera Yogam,
-        health, mind, meditation, relationships, memory, and more.
-      </p>
-
-      <div style="margin-top:15px; font-size:20px;">
-        <span style="margin-right:15px;">📘</span>
-        <span style="margin-right:15px;">📷</span>
-        <span>▶️</span>
-      </div>
-    </div>
-
-    <!-- CENTER -->
-    <div>
-      <h3>Quick Links</h3>
-      <p>Programs</p>
-      <p>Consultation</p>
-      <p>Events</p>
-      <p>Success Stories</p>
-      <p>Gallery</p>
-      <p>Support</p>
-      <p>Privacy Policy</p>
-      <p>Terms of Service</p>
-    </div>
-
-    <!-- RIGHT -->
-    <div>
-      <h3>Contact Us</h3>
-
-      <p>📧 vidhimadhidhyanamaiyam@gmail.com</p>
-      <p>📞 +91 77085 71575</p>
-      <p>
-        📍 Vidhi Madhi Dhyana Maiyam,<br>
-        Pagalavadi<br>
-        Thuraiyur Road, Trichy<br>
-        Tamil Nadu - 621014
-      </p>
-    </div>
-
-  </div>
-
-  <!-- LINE -->
-  <hr style="margin:40px 0; border:0.5px solid #334155;">
-
-  <!-- COPYRIGHT -->
-  <div style="text-align:center; color:#94a3b8;">
-    © 2025 Thendral Foundation. All rights reserved. Crafted with love for holistic wellness.
-  </div>
-
-</div>
-
-<!-- SIMPLE LOGIN SYSTEM -->
-<script>
-
-/* NAVIGATION */
-function goPost(type){
-  window.location.href = "post.html?type=" + type;
-}
-
-function goLogin(){
-  window.location.href = "login.html";
-}
-
-function goSignup(){
-  window.location.href = "signup.html";
-}
-
-/* LOGIN DISPLAY */
-const user = localStorage.getItem("loggedInUser");
-
-if(user){
-  document.getElementById("authArea").innerHTML =
-  `<span style="margin-right:10px;">Welcome, ${user}</span>
-   <button class="btn" onclick="logout()">Logout</button>`;
-}
-
-function logout(){
-  localStorage.removeItem("loggedInUser");
-  location.reload();
-}
-
-</script>
+<footer>
+  <p>© 2025 Thendral Foundation</p>
+</footer>
 
 </body>
 </html>
