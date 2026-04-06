@@ -1,49 +1,42 @@
-// Save user
+// SAVE USER
 function signup() {
-  const user = document.getElementById("signupUser").value;
-  const pass = document.getElementById("signupPass").value;
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
 
-  if (!user || !pass) {
+  if (!email || !pass) {
     alert("Fill all fields");
     return;
   }
 
-  localStorage.setItem(user, pass);
-  alert("Signup successful!");
+  localStorage.setItem(email, pass);
+  alert("Account created!");
   window.location.href = "login.html";
 }
 
-// Login user
+// LOGIN
 function login() {
-  const user = document.getElementById("loginUser").value;
-  const pass = document.getElementById("loginPass").value;
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
 
-  const storedPass = localStorage.getItem(user);
-
-  if (storedPass === pass) {
-    localStorage.setItem("loggedInUser", user);
-    alert("Login successful!");
+  if (localStorage.getItem(email) === pass) {
+    localStorage.setItem("loggedInUser", email);
+    alert("Login success!");
     window.location.href = "index.html";
   } else {
     alert("Invalid credentials");
   }
 }
 
-// Logout
+// LOGOUT
 function logout() {
   localStorage.removeItem("loggedInUser");
-  location.reload();
+  window.location.href = "login.html";
 }
 
-// Show user in navbar
-function checkLogin() {
+// CHECK LOGIN
+function checkAuth() {
   const user = localStorage.getItem("loggedInUser");
-
-  if (user) {
-    document.getElementById("authArea").innerHTML =
-      `<span>Welcome, ${user}</span>
-       <button onclick="logout()">Logout</button>`;
+  if (!user) {
+    window.location.href = "login.html";
   }
 }
-
-window.onload = checkLogin;
