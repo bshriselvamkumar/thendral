@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thendral Foundation</title>
 <link rel="stylesheet" href="style.css">
+<script src="auth.js"></script>
 </head>
 
 <body>
@@ -12,59 +13,72 @@
 <!-- 🔴 NAVBAR -->
 <header class="navbar">
   <div class="logo">
-    <img src="thendral_logo.png">
-    <h2>Thendral Foundation</h2>
+    <img src="logo.png">
+    <div>
+      <h2>Thendral Foundation</h2>
+      <span>Vidhi Madhi Dhyana Maiyam</span>
+    </div>
   </div>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="programs.html">Programs</a>
+    <a href="#">Home</a>
+    <a href="post.html">Programs</a>
     <a href="#">Consultation</a>
     <a href="#">Events</a>
     <a href="#">Gallery</a>
     <a href="#">Support</a>
   </nav>
 
-  <div class="auth">
-    <button>Sign In</button>
-    <button class="signup">Sign Up</button>
+  <div class="auth-buttons">
+    <button onclick="location.href='login.html'">Sign In</button>
+    <button class="signup" onclick="location.href='signup.html'">Sign Up</button>
   </div>
 </header>
 
 <!-- 🔥 HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <h1>Transform Life with <span>Holistic Wellness</span></h1>
-    <p>Natural healing and powerful transformation programs</p>
+  <div class="hero-content">
 
-    <div>
-      <a href="programs.html" class="btn primary">Explore Programs →</a>
+    <h1>
+      Transform Life with <br>
+      <span class="gradient-text">Holistic Wellness</span>
+    </h1>
+
+    <p>
+      Discover natural healing, spiritual guidance, and powerful transformation programs.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="post.html" class="btn primary">Explore Programs →</a>
       <a href="#" class="btn secondary">Book Consultation</a>
     </div>
+
   </div>
+
+  <img src="hero.png" class="hero-img">
 </section>
 
-<!-- 🔥 3 PROGRAM CARDS -->
+<!-- 🔥 PROGRAM CARDS -->
 <section class="program-section">
 
-  <a href="programs.html" class="program-card">
+  <a href="post.html" class="program-card">
     <div class="icon red">❤️</div>
     <h3>Body Detox Program</h3>
-    <p>21-day journey to cleanse your body naturally.</p>
+    <p>Cleanse your body with a 21-day transformation journey.</p>
     <span>Learn More →</span>
   </a>
 
-  <a href="programs.html" class="program-card">
+  <a href="post.html" class="program-card">
     <div class="icon yellow">⚡</div>
     <h3>Mind Energy Program</h3>
-    <p>Boost mental clarity and cognitive power.</p>
+    <p>Boost focus, clarity, and cognitive performance.</p>
     <span>Learn More →</span>
   </a>
 
-  <a href="programs.html" class="program-card">
+  <a href="post.html" class="program-card">
     <div class="icon orange">🛡️</div>
     <h3>Kubera Yogam</h3>
-    <p>Unlock prosperity and abundance.</p>
+    <p>Unlock wealth, abundance, and success energy.</p>
     <span>Learn More →</span>
   </a>
 
@@ -77,12 +91,12 @@
 
     <div>
       <h3>Thendral Foundation</h3>
-      <p>Holistic wellness through natural healing, meditation, and transformation.</p>
+      <p>Dedicated to holistic wellness, meditation, and natural healing.</p>
     </div>
 
     <div>
       <h4>Quick Links</h4>
-      <a href="programs.html">Programs</a>
+      <a href="post.html">Programs</a>
       <a href="#">Consultation</a>
       <a href="#">Events</a>
       <a href="#">Gallery</a>
@@ -90,14 +104,14 @@
 
     <div>
       <h4>Contact</h4>
-      <p>vidhimadhidhyanamaiyam@gmail.com</p>
       <p>+91 77085 71575</p>
+      <p>vidhimadhidhyanamaiyam@gmail.com</p>
     </div>
 
   </div>
 
   <div class="credits">
-    © 2025 Thendral Foundation | Designed by Nithesh 😎
+    © 2025 Thendral Foundation • Crafted with ❤️ by Nithesh
   </div>
 
 </footer>
