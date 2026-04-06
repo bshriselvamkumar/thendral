@@ -1,18 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thendral Foundation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
 <!-- 🔴 NAVBAR -->
 <header class="navbar">
   <div class="logo">
-    <img src="thendral_logo.png" />
-    <div>
-      <h2>Thendral Foundation</h2>
-      <span>Vidhi Madhi Dhyana Maiyam</span>
-    </div>
+    <img src="thendral_logo.png">
+    <h2>Thendral Foundation</h2>
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Programs</a>
+    <a href="index.html">Home</a>
+    <a href="programs.html">Programs</a>
     <a href="#">Consultation</a>
     <a href="#">Events</a>
     <a href="#">Gallery</a>
@@ -20,104 +26,81 @@
   </nav>
 
   <div class="auth">
-    <button onclick="showLogin()">Sign In</button>
-    <button class="signup" onclick="showSignup()">Sign Up</button>
+    <button>Sign In</button>
+    <button class="signup">Sign Up</button>
   </div>
 </header>
 
-<!-- 🔥 HERO SECTION -->
+<!-- 🔥 HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>
-      Transform Life with <br>
-      <span>Holistic Wellness</span>
-    </h1>
+    <h1>Transform Life with <span>Holistic Wellness</span></h1>
+    <p>Natural healing and powerful transformation programs</p>
 
-    <p>
-      Discover natural healing, spiritual guidance, and transformative programs by <b>Dr. Thendral</b>
-    </p>
-
-    <div class="hero-buttons">
-      <button class="primary">Explore Programs →</button>
-      <button class="secondary">Book Consultation</button>
+    <div>
+      <a href="programs.html" class="btn primary">Explore Programs →</a>
+      <a href="#" class="btn secondary">Book Consultation</a>
     </div>
   </div>
-
-  <img src="hero.png" class="hero-img">
 </section>
 
-<!-- 🔥 PROGRAM CARDS -->
-<section class="cards">
+<!-- 🔥 3 PROGRAM CARDS -->
+<section class="program-section">
 
-  <div class="program-card">
-    <div class="icon">❤️</div>
+  <a href="programs.html" class="program-card">
+    <div class="icon red">❤️</div>
     <h3>Body Detox Program</h3>
-    <p>21-day natural body cleanse and rejuvenation.</p>
-    <a href="#">Learn More →</a>
-  </div>
+    <p>21-day journey to cleanse your body naturally.</p>
+    <span>Learn More →</span>
+  </a>
 
-  <div class="program-card">
-    <div class="icon">🧘</div>
-    <h3>Yoga & Meditation</h3>
-    <p>Achieve peace and balance through guided sessions.</p>
-    <a href="#">Learn More →</a>
-  </div>
+  <a href="programs.html" class="program-card">
+    <div class="icon yellow">⚡</div>
+    <h3>Mind Energy Program</h3>
+    <p>Boost mental clarity and cognitive power.</p>
+    <span>Learn More →</span>
+  </a>
 
-  <div class="program-card">
-    <div class="icon">🌿</div>
-    <h3>Natural Healing</h3>
-    <p>Holistic therapies for mind and body wellness.</p>
-    <a href="#">Learn More →</a>
-  </div>
+  <a href="programs.html" class="program-card">
+    <div class="icon orange">🛡️</div>
+    <h3>Kubera Yogam</h3>
+    <p>Unlock prosperity and abundance.</p>
+    <span>Learn More →</span>
+  </a>
 
 </section>
 
-<!-- 🔐 LOGIN MODAL -->
-<div id="loginModal" class="modal">
-  <div class="modal-box">
-    <h2>Login</h2>
-    <input id="loginEmail" placeholder="Email">
-    <input id="loginPassword" type="password" placeholder="Password">
-    <button onclick="login()">Login</button>
+<!-- 🔥 FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div>
+      <h3>Thendral Foundation</h3>
+      <p>Holistic wellness through natural healing, meditation, and transformation.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="programs.html">Programs</a>
+      <a href="#">Consultation</a>
+      <a href="#">Events</a>
+      <a href="#">Gallery</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>vidhimadhidhyanamaiyam@gmail.com</p>
+      <p>+91 77085 71575</p>
+    </div>
+
   </div>
-</div>
 
-<!-- 🔐 SIGNUP MODAL -->
-<div id="signupModal" class="modal">
-  <div class="modal-box">
-    <h2>Sign Up</h2>
-    <input id="signupEmail" placeholder="Email">
-    <input id="signupPassword" type="password" placeholder="Password">
-    <button onclick="signup()">Create Account</button>
+  <div class="credits">
+    © 2025 Thendral Foundation | Designed by Nithesh 😎
   </div>
-</div>
 
-<script>
-function showLogin() {
-  document.getElementById("loginModal").style.display = "flex";
-}
-function showSignup() {
-  document.getElementById("signupModal").style.display = "flex";
-}
-
-function signup() {
-  const email = document.getElementById("signupEmail").value;
-  const pass = document.getElementById("signupPassword").value;
-
-  localStorage.setItem(email, pass);
-  alert("Account Created!");
-}
-
-function login() {
-  const email = document.getElementById("loginEmail").value;
-  const pass = document.getElementById("loginPassword").value;
-
-  if(localStorage.getItem(email) === pass){
-    alert("Login Successful!");
-  } else {
-    alert("Invalid credentials!");
-  }
-}
-</script>
+</footer>
 
 </body>
+</html>
