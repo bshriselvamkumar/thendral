@@ -1,63 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/thendral_logo.png" />
-  <link rel="apple-touch-icon" href="/thendral_logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Primary Meta Tags -->
-  <title>Thendral Foundation - Complete Lifestyle Training & Natural Healing</title>
-  <meta name="title" content="Thendral Foundation - Complete Lifestyle Training & Natural Healing" />
-  <meta name="description" content="Transform your life with Thendral Foundation's holistic wellness programs. Expert guidance in natural healing, lifestyle training, yoga, meditation, and spiritual development." />
-  <meta name="keywords" content="natural healing, lifestyle training, holistic wellness, yoga, meditation, spiritual development, health programs, wellness consultation, Thendral Foundation, ayurveda, natural therapy" />
-  <meta name="author" content="Thendral Foundation" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
-  <link rel="canonical" href="https://thendralfoundation.live" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thendralfoundation.live" />
-  <meta property="og:title" content="Thendral Foundation - Complete Lifestyle Training & Natural Healing" />
-  <meta property="og:description" content="Transform your life with holistic wellness programs." />
-  <meta property="og:image" content="https://thendralfoundation.live/thendral_logo.png" />
-  <meta property="og:site_name" content="Thendral Foundation" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Thendral Foundation - Complete Lifestyle Training & Natural Healing" />
-  <meta name="twitter:description" content="Holistic wellness, yoga, meditation, and healing." />
-  <meta name="twitter:image" content="https://thendralfoundation.live/thendral_logo.png" />
-
-  <!-- Theme -->
-  <meta name="theme-color" content="#dc2626" />
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Thendral Foundation",
-    "url": "https://thendralfoundation.live",
-    "logo": "https://thendralfoundation.live/thendral_logo.png",
-    "sameAs": [
-      "https://m.facebook.com/61577276882401/",
-      "https://twitter.com/thendralfoundation",
-      "https://instagram.com/thendralfoundation"
-    ]
-  }
-  </script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/index.css" />
-
-</head>
-
 <body>
-  <div id="root"></div>
 
-  <!-- Scripts -->
-  <script type="module" src="assets/index.js"></script>
+<!-- 🔴 NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="thendral_logo.png" />
+    <div>
+      <h2>Thendral Foundation</h2>
+      <span>Vidhi Madhi Dhyana Maiyam</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Programs</a>
+    <a href="#">Consultation</a>
+    <a href="#">Events</a>
+    <a href="#">Gallery</a>
+    <a href="#">Support</a>
+  </nav>
+
+  <div class="auth">
+    <button onclick="showLogin()">Sign In</button>
+    <button class="signup" onclick="showSignup()">Sign Up</button>
+  </div>
+</header>
+
+<!-- 🔥 HERO SECTION -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      Transform Life with <br>
+      <span>Holistic Wellness</span>
+    </h1>
+
+    <p>
+      Discover natural healing, spiritual guidance, and transformative programs by <b>Dr. Thendral</b>
+    </p>
+
+    <div class="hero-buttons">
+      <button class="primary">Explore Programs →</button>
+      <button class="secondary">Book Consultation</button>
+    </div>
+  </div>
+
+  <img src="hero.png" class="hero-img">
+</section>
+
+<!-- 🔥 PROGRAM CARDS -->
+<section class="cards">
+
+  <div class="program-card">
+    <div class="icon">❤️</div>
+    <h3>Body Detox Program</h3>
+    <p>21-day natural body cleanse and rejuvenation.</p>
+    <a href="#">Learn More →</a>
+  </div>
+
+  <div class="program-card">
+    <div class="icon">🧘</div>
+    <h3>Yoga & Meditation</h3>
+    <p>Achieve peace and balance through guided sessions.</p>
+    <a href="#">Learn More →</a>
+  </div>
+
+  <div class="program-card">
+    <div class="icon">🌿</div>
+    <h3>Natural Healing</h3>
+    <p>Holistic therapies for mind and body wellness.</p>
+    <a href="#">Learn More →</a>
+  </div>
+
+</section>
+
+<!-- 🔐 LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-box">
+    <h2>Login</h2>
+    <input id="loginEmail" placeholder="Email">
+    <input id="loginPassword" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- 🔐 SIGNUP MODAL -->
+<div id="signupModal" class="modal">
+  <div class="modal-box">
+    <h2>Sign Up</h2>
+    <input id="signupEmail" placeholder="Email">
+    <input id="signupPassword" type="password" placeholder="Password">
+    <button onclick="signup()">Create Account</button>
+  </div>
+</div>
+
+<script>
+function showLogin() {
+  document.getElementById("loginModal").style.display = "flex";
+}
+function showSignup() {
+  document.getElementById("signupModal").style.display = "flex";
+}
+
+function signup() {
+  const email = document.getElementById("signupEmail").value;
+  const pass = document.getElementById("signupPassword").value;
+
+  localStorage.setItem(email, pass);
+  alert("Account Created!");
+}
+
+function login() {
+  const email = document.getElementById("loginEmail").value;
+  const pass = document.getElementById("loginPassword").value;
+
+  if(localStorage.getItem(email) === pass){
+    alert("Login Successful!");
+  } else {
+    alert("Invalid credentials!");
+  }
+}
+</script>
+
 </body>
-</html>
