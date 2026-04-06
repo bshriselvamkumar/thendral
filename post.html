@@ -4,17 +4,19 @@
 <meta charset="UTF-8">
 <title>Programs</title>
 <link rel="stylesheet" href="style.css">
+<script src="auth.js"></script>
 </head>
 
-<body>
+<body onload="checkAuth()">
 
 <header class="navbar">
   <a href="index.html">⬅ Back</a>
+  <button onclick="logout()">Logout</button>
 </header>
 
 <section class="program-hero">
   <h1>Transformative Wellness Programs</h1>
-  <p>Choose programs designed for your growth</p>
+  <p>Choose the best program for your journey</p>
 </section>
 
 <section class="program-list">
@@ -22,19 +24,22 @@
   <div class="course-card">
     <img src="program1.jpg">
     <h3>Teacher Training</h3>
-    <a href="#">View Details</a>
+    <button>View Details</button>
+    <button class="outline">Register Now</button>
   </div>
 
   <div class="course-card">
     <img src="program2.jpg">
     <h3>Business Training</h3>
-    <a href="#">View Details</a>
+    <button>View Details</button>
+    <button class="outline">Register Now</button>
   </div>
 
   <div class="course-card">
     <img src="program3.jpg">
     <h3>Memory Training</h3>
-    <a href="#">View Details</a>
+    <button>View Details</button>
+    <button class="outline">Register Now</button>
   </div>
 
 </section>
