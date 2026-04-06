@@ -26,30 +26,30 @@
 /* HERO */
 .hero {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 80px;
   background: linear-gradient(120deg,#fff,#fef2f2);
 }
 
-.hero-content {
+.hero-text {
   max-width: 500px;
 }
 
 .hero h1 {
   font-size: 55px;
-  color: #92400e;
 }
 
-/* 🔥 GRADIENT TEXT */
+/* GRADIENT TEXT */
 .gradient-text {
   background: linear-gradient(90deg,#dc2626,#f59e0b);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.hero p {
-  margin: 20px 0;
-  color: #555;
+.hero-img img {
+  width: 400px;
+  opacity: 0.9;
 }
 
 /* BUTTONS */
@@ -57,10 +57,12 @@
   padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
+  font-weight: 600;
 }
 
+/* 🔥 GRADIENT BUTTON */
 .primary {
-  background: #dc2626;
+  background: linear-gradient(90deg,#dc2626,#f97316);
   color: white;
 }
 
@@ -74,7 +76,7 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 80px;
+  padding: 60px;
 }
 
 .program-card {
@@ -85,69 +87,54 @@
   text-align: center;
   text-decoration: none;
   color: black;
-  transition: 0.4s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .program-card:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 20px 50px rgba(220,38,38,0.3);
+  transform: translateY(-10px) scale(1.05);
 }
 
-/* ICON */
-.icon {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-/* PROGRAM PAGE */
-.program-hero {
-  background: linear-gradient(90deg,#dc2626,#f97316);
-  color: white;
-  text-align: center;
-  padding: 60px;
-}
-
-/* PROGRAM CARDS */
-.program-list {
+/* LOGIN PAGE */
+.center {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 50px;
+  align-items: center;
+  height: 100vh;
+  background: #f1f5f9;
 }
 
-.course-card {
-  width: 260px;
-  padding: 20px;
-  border-radius: 12px;
+.auth-box {
+  width: 350px;
+  padding: 30px;
+  border-radius: 15px;
   background: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.course-card img {
+.auth-box input {
   width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
   border-radius: 10px;
-}
-
-.course-card button {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  background: #dc2626;
+  background: linear-gradient(90deg,#dc2626,#f97316);
   color: white;
   border: none;
-}
-
-.outline {
-  background: transparent;
-  border: 2px solid #dc2626;
-  color: #dc2626;
 }
 
 /* FOOTER */
 .footer {
   background: #0f172a;
   color: white;
-  padding: 50px;
+  padding: 40px;
 }
 
 .footer-container {
@@ -155,13 +142,7 @@
   justify-content: space-between;
 }
 
-.footer a {
-  display: block;
-  color: #ccc;
-}
-
 .credits {
   text-align: center;
   margin-top: 20px;
-  color: #aaa;
 }
