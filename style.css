@@ -1,50 +1,167 @@
-body{
-  margin:0;
-  font-family:Arial;
-  background:#eee;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: white;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
 }
 
 /* HERO */
-.hero{
-  background:teal;
-  color:white;
-  padding:80px 20px;
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  background: linear-gradient(120deg,#fff,#fef2f2);
 }
 
-.hero h1{
-  font-size:40px;
+.hero-content {
+  max-width: 500px;
 }
 
-/* NAV */
-nav{
-  background:#1f7a73;
-  padding:10px;
+.hero h1 {
+  font-size: 55px;
+  color: #92400e;
 }
 
-nav a{
-  color:white;
-  margin-right:20px;
-  text-decoration:none;
+/* 🔥 GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(90deg,#dc2626,#f59e0b);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-/* PROGRAMS */
-.programs{
-  padding:20px;
+.hero p {
+  margin: 20px 0;
+  color: #555;
 }
 
-/* CARDS (BLACK BOXES SAME AS YOUR OLD UI) */
-.card{
-  background:black;
-  color:white;
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
+/* BUTTONS */
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.primary {
+  background: #dc2626;
+  color: white;
+}
+
+.secondary {
+  border: 2px solid #dc2626;
+  color: #dc2626;
+}
+
+/* CARDS */
+.program-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 80px;
+}
+
+.program-card {
+  width: 300px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.program-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(220,38,38,0.3);
+}
+
+/* ICON */
+.icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* PROGRAM PAGE */
+.program-hero {
+  background: linear-gradient(90deg,#dc2626,#f97316);
+  color: white;
+  text-align: center;
+  padding: 60px;
+}
+
+/* PROGRAM CARDS */
+.program-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.course-card {
+  width: 260px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.course-card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.outline {
+  background: transparent;
+  border: 2px solid #dc2626;
+  color: #dc2626;
 }
 
 /* FOOTER */
-footer{
-  background:#0b1c2c;
-  color:white;
-  text-align:center;
-  padding:20px;
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  display: block;
+  color: #ccc;
+}
+
+.credits {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
 }
