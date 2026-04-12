@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,31 +6,60 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+  background: #f9fafb;
+}
+
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: white;
   align-items: center;
+  padding: 15px 50px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .logo img {
   width: 50px;
 }
 
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #374151;
+}
+
+nav a:hover {
+  color: #dc2626;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons a {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.signup {
+  background: #dc2626;
+  color: white;
+}
+
 /* HERO */
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 80px;
-  background: linear-gradient(120deg,#fff,#fef2f2);
+  background: linear-gradient(120deg,#fff,#fff1f2);
 }
 
 .hero-text {
@@ -38,6 +68,7 @@
 
 .hero h1 {
   font-size: 55px;
+  color: #92400e;
 }
 
 /* GRADIENT TEXT */
@@ -47,28 +78,59 @@
   color: transparent;
 }
 
+.hero p {
+  margin: 20px 0;
+  color: #4b5563;
+}
+
 .hero-img img {
-  width: 400px;
-  opacity: 0.9;
+  width: 420px;
 }
 
 /* BUTTONS */
 .btn {
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
+  margin-right: 10px;
 }
 
-/* 🔥 GRADIENT BUTTON */
+/* PRIMARY */
 .primary {
   background: linear-gradient(90deg,#dc2626,#f97316);
   color: white;
 }
 
+.primary:hover {
+  transform: scale(1.05);
+}
+
+/* SECONDARY */
 .secondary {
   border: 2px solid #dc2626;
   color: #dc2626;
+}
+
+.secondary:hover {
+  background: #dc2626;
+  color: white;
+}
+
+/* HEADING */
+.program-heading {
+  text-align: center;
+  padding: 70px 20px 20px;
+}
+
+.program-heading h2 {
+  font-size: 34px;
+}
+
+.program-heading p {
+  max-width: 650px;
+  margin: auto;
+  color: #6b7280;
 }
 
 /* CARDS */
@@ -77,72 +139,115 @@
   justify-content: center;
   gap: 30px;
   padding: 60px;
+  flex-wrap: wrap;
 }
 
 .program-card {
   width: 300px;
   padding: 30px;
   background: white;
-  border-radius: 20px;
+  border-radius: 18px;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #111;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .program-card:hover {
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-10px);
 }
 
-/* LOGIN PAGE */
-.center {
+/* ICON */
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #f1f5f9;
+  margin: auto;
+  font-size: 26px;
+  margin-bottom: 15px;
 }
 
-.auth-box {
-  width: 350px;
-  padding: 30px;
-  border-radius: 15px;
-  background: white;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.icon.red {
+  background: #fee2e2;
+  color: #dc2626;
 }
 
-.auth-box input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+.icon.yellow {
+  background: #fef3c7;
+  color: #d97706;
 }
 
-.auth-box button {
-  width: 100%;
-  padding: 12px;
+.icon.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+/* CARD TEXT */
+.program-card p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.program-card span {
+  display: inline-block;
+  padding: 10px 18px;
   border-radius: 10px;
-  background: linear-gradient(90deg,#dc2626,#f97316);
+  border: 2px solid #dc2626;
+  color: #dc2626;
+}
+
+.program-card:hover span {
+  background: #dc2626;
   color: white;
-  border: none;
 }
 
 /* FOOTER */
 .footer {
   background: #0f172a;
   color: white;
-  padding: 40px;
+  padding: 50px;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
 }
 
 .credits {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25px;
+  color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .program-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
