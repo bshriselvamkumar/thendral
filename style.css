@@ -251,3 +251,87 @@ nav a:hover {
     align-items: center;
   }
 }
+
+
+
+/* 🔥 CONSULT HERO */
+.consult-hero {
+  background: linear-gradient(90deg,#059669,#10b981);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.consult-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.consult-hero p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* HEADING */
+.consult-heading {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.consult-heading h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.consult-heading p {
+  color: #6b7280;
+}
+
+/* CARDS */
+.consult-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.consult-card {
+  width: 320px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.consult-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* TEXT */
+.consult-card p {
+  color: #6b7280;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+/* META */
+.consult-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+/* PRICE */
+.price {
+  color: #059669;
+}
+
+.free {
+  color: #10b981;
+}
