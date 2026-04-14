@@ -335,3 +335,126 @@ nav a:hover {
 .free {
   color: #10b981;
 }
+
+
+/* 🔵 HERO */
+.support-hero {
+  background: linear-gradient(90deg,#3b82f6,#4f46e5);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.support-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.support-hero p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* 🔥 SUPPORT CARDS */
+.support-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+
+.support-card {
+  width: 300px;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.support-card:hover {
+  transform: translateY(-10px);
+}
+
+.support-card p {
+  color: #6b7280;
+  margin: 10px 0;
+}
+
+.support-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ICON */
+.support-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.support-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.support-icon.green {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.support-icon.lightgreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* 🔥 FAQ */
+.faq-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.faq-section p {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.faq-box {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-item h4 {
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  color: #6b7280;
+  font-size: 14px;
+}
